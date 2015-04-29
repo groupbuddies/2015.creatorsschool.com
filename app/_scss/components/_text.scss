@@ -1,0 +1,35 @@
+// Text
+//
+// Styles body text's font and color properties.
+//
+// default - Most commonly used text
+// .Text--inverted - Used in an inverted background color
+// .Text--large - Used in something like a title???
+//
+// markup:
+// <div class="Text {$modifiers}">
+//   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+// </div>
+//
+// Styleguide 1.3
+
+@import '../reset';
+@import '../theme_vars';
+
+$Text-color-default: $Theme-palette-text-body-default;
+$Text-color-inverted: $Theme-color-white;
+
+.Text {
+  @include font-properties(base);
+  color: $Text-color-default;
+  font-weight: $Theme-typography-fontWeight-regular;
+}
+
+.Text.Text--inverted {
+  color: $Text-color-inverted;
+}
+
+.Text.Text--large {
+  @include font-properties(large);
+  font-weight: $Theme-typography-fontWeight-bold;
+}

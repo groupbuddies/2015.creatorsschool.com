@@ -1,0 +1,52 @@
+// Quote
+//
+// Styles quotes
+//
+// markup:
+// <div class="Quote">
+//   <div class="Quote-content">
+//     “Saber <strong class="Quote-contentHightlighted">programar</strong> é o mais próximo que temos de um <strong class="Quote-contentHightlighted">super-poder.</strong>”
+//   </div>
+//   <div class="Quote-author">
+//     DREW HOUSTON
+//   </div>
+//   <div class="Quote-description">
+//     founder of Dropbox
+//   </div>
+// </div>
+//
+// Styleguide 1.4
+
+@import '../reset';
+@import '../theme_vars';
+
+.Quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Quote-content {
+  @include font-properties(large);
+  color: $Theme-color-tango;
+}
+
+.Quote-hightlight {
+  font-weight: $Theme-typography-fontWeight-bold;
+}
+
+.Quote-author {
+  @include headingCommonStyles;
+  color: $Theme-color-heather;
+}
+
+.Quote-description {
+  color: $Theme-color-heather;
+  font-weight: $Theme-typography-fontWeight-regular;
+}
+
+@include media(">=tablet") {
+  .Quote {
+    align-items: flex-start;
+  }
+}

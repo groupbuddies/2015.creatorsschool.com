@@ -1,0 +1,27 @@
+// Heading
+//
+// Styles heading's font and color properties.
+//
+// default - Most commonly used heading
+// .Heading--small - Smaller font
+//
+// markup:
+// <div class="Heading {$modifiers}">
+//   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+// </div>
+//
+// Styleguide 2.9
+
+@import '../reset';
+@import '../theme_vars';
+
+.Heading {
+  @include font-properties(large);
+  @include headingCommonStyles;
+  width: 100%;
+  color: $Theme-palette-text-heading-color-default;
+}
+
+.Heading.Heading--small {
+  @include font-properties(base);
+}

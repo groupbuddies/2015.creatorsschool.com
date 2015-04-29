@@ -14,8 +14,10 @@
 
 .Theme {
   @include font-properties(base);
+  background-color: $Theme-color-white;
   color: $Theme-palette-text-body-default;
   font-family: $Theme-typography-sansSerif-fontFamily;
+  font-weight: $Theme-typography-fontWeight-medium;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

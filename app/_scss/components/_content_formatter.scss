@@ -1,0 +1,39 @@
+// ContentFormatter
+//
+// Aligns text.
+//
+// default - Aligns the text to the left in small resolutions and centers the text in larger ones
+// .ContentFormatter--centerThenAlignLeft - Makes the opposite
+// .ContentFormatter--center - Content is always centered
+//
+// markup:
+// <div class="ContentFormatter {$modifiers}">
+//   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+// </div>
+//
+// Styleguide 1.6
+
+@import '../reset';
+@import '../theme_vars';
+
+.ContentFormatter {
+  text-align: left;
+}
+
+.ContentFormatter.ContentFormatter--center {
+  text-align: center;
+}
+
+.ContentFormatter.ContentFormatter--centerThenAlignLeft {
+  text-align: center;
+}
+
+@include media(">=tablet") {
+  .ContentFormatter {
+    text-align: center;
+  }
+
+  .ContentFormatter.ContentFormatter--centerThenAlignLeft {
+    text-align: left;
+  }
+}

@@ -1,0 +1,36 @@
+// ButtonPrimary
+//
+// Button element that represents a primary action in the application.
+//
+// default - The default primary button
+//
+// markup:
+// <div class="ButtonPrimary {$modifiers}">Some text</div>
+//
+// Styleguide 1.7
+
+@import '../reset';
+@import '../theme_vars';
+
+$ButtonPrimary-default-background: $Theme-color-malachite;
+$ButtonPrimary-default-color: $Theme-color-white;
+$ButtonPrimary-default-hover: darken($ButtonPrimary-default-background, 10);
+
+.ButtonPrimary {
+  @include font-properties(base);
+  display: flex;
+  align-items: center;
+  padding: $Theme-spacing-xSmall;
+  text-decoration: none;
+  background-color: $ButtonPrimary-default-background;
+  border-color: $ButtonPrimary-default-background;
+  color: $ButtonPrimary-default-color;
+  box-shadow: 0 4px 0 rgba(230, 230, 230, 1);
+  font-weight: $Theme-typography-fontWeight-bold;
+
+  &:hover {
+    background-color: $ButtonPrimary-default-hover;
+    border-color: $ButtonPrimary-default-hover;
+    color: $ButtonPrimary-default-color;
+  }
+}

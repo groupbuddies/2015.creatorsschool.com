@@ -1,0 +1,20 @@
+// Layout
+//
+// Distributes its descendants in different screen resolutions
+//
+// Styleguide 1.8
+
+@import '../reset';
+@import '../theme_vars';
+
+.Layout-smallMargin {
+  margin-bottom: $Theme-spacing-small;
+}
+
+.Layout-defaultThenLargeMargin {
+  margin-bottom: $Theme-spacing-default;
+
+  @include media(">=tablet") {
+    margin-bottom: $Theme-spacing-large;
+  }
+}

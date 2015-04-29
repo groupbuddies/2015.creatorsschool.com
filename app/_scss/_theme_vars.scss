@@ -21,13 +21,16 @@ $Theme-color-white: #fff;
 // Color Usage
 $Theme-palette-text-body-default: $Theme-color-paleSky;
 
+$Theme-palette-text-heading-color-default: $Theme-color-fiord;
+
 // Spacing
 $Theme-spacing-default: 50px;
 $Theme-spacing-large: 100px;
 $Theme-spacing-small: 25px;
+$Theme-spacing-xSmall: 10px;
 
 // Typography
-$Theme-typography-fontWeight-bold: 700;
+$Theme-typography-fontWeight-bold: 900;
 $Theme-typography-fontWeight-medium: 500;
 $Theme-typography-fontWeight-regular: 300;
 $Theme-typography-sansSerif-fontFamily: "museo-sans", sans-serif;
@@ -67,4 +70,10 @@ $Theme-font-sizes: (
     font-size: map-get(map-get(map-get(map-get($Theme-font-sizes, "desktop"), $family), $size), 'font-size');
     line-height: map-get(map-get(map-get(map-get($Theme-font-sizes, "desktop"), $family), $size), 'line-height');
   }
+}
+
+// Common styles for headings
+@mixin headingCommonStyles {
+  font-weight: $Theme-typography-fontWeight-bold;
+  text-transform: uppercase;
 }

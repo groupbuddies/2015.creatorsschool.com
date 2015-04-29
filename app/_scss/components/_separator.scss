@@ -1,0 +1,20 @@
+// Separator
+//
+// A line that separates content.
+// Defines its own width.
+//
+// markup:
+// <div class="Separator"></div>
+//
+// Styleguide 1.5
+
+@import '../reset';
+@import '../theme_vars';
+
+.Separator {
+  display: inline-block;
+  width: 40px;
+  margin: $Theme-spacing-small 0;
+  border: 4px solid $Theme-color-ripeLemon;
+  border-top: 0;
+}
