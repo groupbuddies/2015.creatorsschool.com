@@ -1,0 +1,70 @@
+// Theme
+//
+// Theme variables, functions and mixins only.
+// No rule definitions in here.
+//
+// Styleguide 1
+
+// Points of reassembly
+@import 'include-media/dist/include-media';
+
+// Brand Colors
+$Theme-color-fiord: #445c69;
+$Theme-color-heather: #bec6d3;
+$Theme-color-malachite: #19d374;
+$Theme-color-paleSky: #627087;
+$Theme-color-pictonBlue: #2aa7f0;
+$Theme-color-ripeLemon: #f8e02d;
+$Theme-color-tango: #f06f2a;
+$Theme-color-white: #fff;
+
+// Color Usage
+$Theme-palette-text-body-default: $Theme-color-paleSky;
+
+// Spacing
+$Theme-spacing-default: 50px;
+$Theme-spacing-large: 100px;
+$Theme-spacing-small: 25px;
+
+// Typography
+$Theme-typography-fontWeight-bold: 700;
+$Theme-typography-fontWeight-medium: 500;
+$Theme-typography-fontWeight-regular: 300;
+$Theme-typography-sansSerif-fontFamily: "museo-sans", sans-serif;
+$Theme-font-sizes: (
+  mobile: (
+    sansSerif: (
+      base: (
+        font-size: 12px,
+        line-height: 1.83 // 22px / 12px
+      ),
+      large: (
+        font-size: 18px,
+        line-height: 1.55 // 28px / 18px
+      )
+    )
+  ),
+  desktop: (
+    sansSerif: (
+      base: (
+        font-size: 16px,
+        line-height: 1.625 // 26px / 16px
+      ),
+      large: (
+        font-size: 22px,
+        line-height: 1.45 // 32px / 22px
+      )
+    )
+  )
+);
+
+// font-size and line-height styles
+@mixin font-properties($size: "base", $family: "sansSerif") {
+  font-size: map-get(map-get(map-get(map-get($Theme-font-sizes, "mobile"), $family), $size), 'font-size');
+  line-height: map-get(map-get(map-get(map-get($Theme-font-sizes, "mobile"), $family), $size), 'line-height');
+
+  @include media(">=tablet") {
+    font-size: map-get(map-get(map-get(map-get($Theme-font-sizes, "desktop"), $family), $size), 'font-size');
+    line-height: map-get(map-get(map-get(map-get($Theme-font-sizes, "desktop"), $family), $size), 'line-height');
+  }
+}
