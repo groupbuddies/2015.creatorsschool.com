@@ -21,7 +21,9 @@ $Theme-color-white: #fff;
 // Color Usage
 $Theme-palette-text-body-default: $Theme-color-paleSky;
 
-$Theme-palette-text-heading-color-default: $Theme-color-fiord;
+// Layers
+$Theme-layer-images: 5;
+$Theme-layer-hideImages: $Theme-layer-images + 1;
 
 // Spacing
 $Theme-spacing-default: 50px;

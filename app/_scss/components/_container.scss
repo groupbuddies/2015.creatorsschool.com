@@ -7,6 +7,7 @@
 //
 // default - One column layout; Centers content
 // .Container--twoColumn - Two column layout; Centers content in each column for small resolutions; Aligns content to the left in each column for large resolutions
+// .Container--swapOnDesktop - Swaps the second column to the first position
 //
 // markup:
 // <div class="Container">
@@ -43,6 +44,18 @@
 .Container.Container--twoColumn {
   .Container-column + .Container-column {
     margin-top: $Theme-spacing-small;
+  }
+}
+
+.Container.Container--swapOnDesktop {
+  @include media(">=tablet") {
+    .Container-column {
+      order: 2;
+    }
+
+    .Container-column + .Container-column {
+      order: 1;
+    }
   }
 }
 

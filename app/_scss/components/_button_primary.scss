@@ -3,6 +3,7 @@
 // Button element that represents a primary action in the application.
 //
 // default - The default primary button
+// .ButtonPrimary--versionOne - Same button with a different colors
 //
 // markup:
 // <div class="ButtonPrimary {$modifiers}">Some text</div>
@@ -15,22 +16,42 @@
 $ButtonPrimary-default-background: $Theme-color-malachite;
 $ButtonPrimary-default-color: $Theme-color-white;
 $ButtonPrimary-default-hover: darken($ButtonPrimary-default-background, 10);
+$ButtonPrimary-versionOne-background: $Theme-color-ripeLemon;
+$ButtonPrimary-versionOne-color: $Theme-color-fiord;
+$ButtonPrimary-versionOne-hover: darken($ButtonPrimary-versionOne-background, 10);
 
 .ButtonPrimary {
   @include font-properties(base);
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 160px;
   padding: $Theme-spacing-xSmall;
   text-decoration: none;
   background-color: $ButtonPrimary-default-background;
-  border-color: $ButtonPrimary-default-background;
   color: $ButtonPrimary-default-color;
-  box-shadow: 0 4px 0 rgba(230, 230, 230, 1);
+  box-shadow: 0 4px 0 rgba($Theme-color-fiord, 0.2);
   font-weight: $Theme-typography-fontWeight-bold;
 
   &:hover {
     background-color: $ButtonPrimary-default-hover;
-    border-color: $ButtonPrimary-default-hover;
     color: $ButtonPrimary-default-color;
+  }
+}
+
+.ButtonPrimary.ButtonPrimary--versionOne {
+  background-color: $ButtonPrimary-versionOne-background;
+  color: $ButtonPrimary-versionOne-color;
+
+  &:hover {
+    background-color: $ButtonPrimary-versionOne-hover;
+    color: $ButtonPrimary-versionOne-color;
+  }
+}
+
+@include media(">=tablet") {
+  .ButtonPrimary {
+    max-width: 200px;
   }
 }

@@ -1,0 +1,27 @@
+// RibbonSeparator
+//
+// Adjusts the margin between to the surrounding content
+//
+// markup:
+// <div class="RibbonSeparator"></div>
+//
+// Styleguide 1.12
+
+@import '../reset';
+@import '../theme_vars';
+
+.RibbonSeparator {
+  margin-bottom: $Theme-spacing-default;
+
+  @include media(">=600px") {
+    margin-bottom: 0;
+  }
+
+  @include media(">=1024px") {
+    margin-bottom: -5%;
+  }
+
+  @include media(">=1280px") {
+    margin-bottom: -7%;
+  }
+}

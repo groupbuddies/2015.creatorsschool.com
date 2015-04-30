@@ -4,6 +4,7 @@
 //
 // default - Most commonly used heading
 // .Heading--small - Smaller font
+// .Heading--inverted - Uses a different color for use in different background colors
 //
 // markup:
 // <div class="Heading {$modifiers}">
@@ -19,9 +20,14 @@
   @include font-properties(large);
   @include headingCommonStyles;
   width: 100%;
-  color: $Theme-palette-text-heading-color-default;
+  color: $Theme-color-pictonBlue;
 }
 
 .Heading.Heading--small {
   @include font-properties(base);
+  color: $Theme-color-fiord;
+}
+
+.Heading.Heading--inverted {
+  color: $Theme-color-white;
 }

@@ -1,0 +1,110 @@
+// Stripe
+//
+// Full width container with a unique background
+//
+// default - Default Stripe
+// .Stripe--orange - Orange stripe
+// .Stripe--green - Orange stripe
+// .Stripe--mobileOnly - Is only displayed on mobile resolutions
+//
+// markup:
+// <div class="Stripe {$modifiers}"></div>
+//
+// Styleguide 1.11
+
+@import '../reset';
+@import '../theme_vars';
+
+@mixin diagonalBackgroundCommonPorperties($v-pad) {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: #{$v-pad}%;
+  // FIXME: unfortunately I don't know how to fix the empty space that sometimes (depends on the screen width) appears between the background-image and the bottom of this element
+  background-position: 0 0px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+@mixin diagonalBackgroundImage($w-int, $h-int, $adjoiningBackgroundColor, $position, $inverted: false) {
+  $triangle: "";
+  $triangle-color: 'rgb(#{red($adjoiningBackgroundColor)}, #{green($adjoiningBackgroundColor)}, #{blue($adjoiningBackgroundColor)})';
+  @if ($position == "top") {
+    top: 0;
+    @if ($inverted == false) {
+      $triangle: '<polygon points="0,0 #{$w-int},0 #{$w-int},#{$h-int}" style="fill:#{$triangle-color};"></polygon>';
+    } @else {
+      $triangle: '<polygon points="0,0 0,#{$h-int} #{$w-int},0" style="fill:#{$triangle-color};"></polygon>';
+    }
+  } @else if ($position == "bottom") {
+    bottom: 0;
+    @if ($inverted == false) {
+      $triangle: '<polygon points="0,0 0,#{$h-int} #{$w-int},#{$h-int}" style="fill:#{$triangle-color};"></polygon>';
+    } @else {
+      $triangle: '<polygon points="0,#{$h-int} #{$w-int},#{$h-int} #{$w-int},0" style="fill:#{$triangle-color};"></polygon>';
+    }
+  }
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="#{$w-int}" height="#{$h-int}" viewBox="0 0 #{$w-int} #{$h-int}" version="1.1">#{$triangle}</svg>');
+}
+
+@mixin diagonal-background($width, $height, $adjoiningBackgroundColor, $inverted: false, $position: "both") {
+  $w-int: $width/1px;
+  $h-int: $height/1px;
+  // floors the number to 3 decimal
+  $v-pad: (floor(($height / $width) * 100000) / 100000) * 100;
+
+  position: relative;
+
+  @if ($position == "top" or $position == "both") {
+    &:before {
+      @include diagonalBackgroundCommonPorperties($v-pad);
+      @include diagonalBackgroundImage($w-int, $h-int, $adjoiningBackgroundColor, top, $inverted);
+      content: '';
+    }
+  }
+
+  @if ($position == "bottom" or $position == "both") {
+    &:after {
+      @include diagonalBackgroundCommonPorperties($v-pad);
+      @include diagonalBackgroundImage($w-int, $h-int, $adjoiningBackgroundColor, bottom, $inverted);
+      content: '';
+      z-index: $Theme-layer-hideImages; // I'm assuming that I will only want to hide/clip the bottom part of the container
+    }
+  }
+}
+
+.Stripe {
+  display: flex;
+  align-items: center;
+  padding: $Theme-spacing-default 0; // not sure if applicable in all the cases
+}
+
+.Stripe.Stripe--orange {
+  overflow: hidden;
+  background-color: $Theme-color-tango;
+
+  @include diagonal-background(320px, 30px, $Theme-color-white, true);
+}
+
+.Stripe.Stripe--green {
+  padding: $Theme-spacing-large 0 0;
+  overflow: hidden;
+  background-color: $Theme-color-malachite;
+
+  @include diagonal-background(320px, 30px, $Theme-color-white);
+
+  @include media(">=tablet") {
+    @include diagonal-background(1440px, 500px, $Theme-color-white, true, top);
+    @include diagonal-background(1440px, 300px, $Theme-color-white, false, bottom);
+  }
+}
+
+@include media(">=tablet") {
+  .Stripe {
+    padding: $Theme-spacing-large 0;
+  }
+
+  .Stripe.Stripe--mobileOnly {
+    display: none;
+  }
+}

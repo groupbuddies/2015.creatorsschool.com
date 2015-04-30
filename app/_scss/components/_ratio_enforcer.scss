@@ -1,0 +1,33 @@
+// RatioEnforcer
+//
+// Forces the image to adapt to its container's dimensions but maintaing its natural ratio.
+//
+// default - Natural growth
+// .RatioEnforcer--diamondStats - Custom ratio for diamondStats image
+// .RatioEnforcer--batmanRobin - Custom ratios for batmanRobin image
+//
+// markup:
+// <img src="img.png" class="RatioEnforcer {$modifiers}">
+//
+// Styleguide 2.13
+
+@import '../reset';
+@import '../theme_vars';
+
+.RatioEnforcer {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.RatioEnforcer.RatioEnforcer--diamondStats {
+  max-width: 319px; // value extracted from the actual SVG source
+}
+
+.RatioEnforcer.RatioEnforcer--batmanRobin {
+  max-width: 281px; // value extracted from the actual SVG source
+
+  @include media(">=tablet") {
+    max-width: 421px; // value extracted from the actual SVG source
+  }
+}
