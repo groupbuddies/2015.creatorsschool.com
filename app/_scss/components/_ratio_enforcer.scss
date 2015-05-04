@@ -24,6 +24,19 @@
   max-width: 319px; // value extracted from the actual SVG source
 }
 
+.RatioEnforcer.RatioEnforcer--subvisualLogo {
+  max-width: 58px; // value extracted from the actual source
+  max-height: 84px; // value extracted from the actual source
+}
+
+.RatioEnforcer.RatioEnforcer--blipLogo {
+  max-width: 116px; // value extracted from the actual source
+}
+
+.RatioEnforcer.RatioEnforcer--otherLogo {
+  max-width: 93px; // value extracted from the actual source
+}
+
 .RatioEnforcer.RatioEnforcer--batmanRobin {
   max-width: 281px; // value extracted from the actual SVG source
 

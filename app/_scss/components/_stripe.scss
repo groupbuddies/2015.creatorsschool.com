@@ -20,6 +20,8 @@
   left: 0;
   width: 100%;
   height: #{$v-pad}%;
+  // FIXME TODO use padding instead of height; change width and height passed into the mixins; this way the angles behave as expected; althought the content needs to force its height somehow
+  // padding: #{$v-pad}% 0 0;
   // FIXME: unfortunately I don't know how to fix the empty space that sometimes (depends on the screen width) appears between the background-image and the bottom of this element
   background-position: 0 0px;
   background-repeat: no-repeat;
@@ -107,6 +109,17 @@
   @include media(">=tablet") {
     @include diagonal-background(1440px, 500px, $Theme-color-white, true, top);
     @include diagonal-background(1440px, 300px, $Theme-color-white, false, bottom);
+  }
+}
+
+.Stripe.Stripe--yellow {
+  background-color: $Theme-color-ripeLemon;
+
+  @include diagonal-background(320px, 30px, $Theme-color-white);
+
+  @include media(">=tablet") {
+    @include diagonal-background(1440px, 500px, $Theme-color-white, false, top);
+    @include diagonal-background(1440px, 300px, $Theme-color-white, true, bottom);
   }
 }
 

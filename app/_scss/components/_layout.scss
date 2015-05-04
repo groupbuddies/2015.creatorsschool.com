@@ -19,6 +19,14 @@
   padding-bottom: $Theme-spacing-default;
 }
 
+.Layout-noneThenSmallMargin {
+  padding-bottom: 0;
+
+  @include media(">=tablet") {
+    padding-bottom: $Theme-spacing-small;
+  }
+}
+
 .Layout-noneThenDefaultMargin {
   padding-bottom: 0;
 

@@ -1,0 +1,38 @@
+// List
+//
+// Stacks items. In row or column directions
+//
+// default - Row direction
+// .List--stacked - Column direction
+//
+// markup:
+// <div class="List {$modifiers}">
+//   <div class="List-item">Lorem Ipsum</div>
+//   <div class="List-item">is simply dummy</div>
+// </div>
+//
+// Styleguide 1.13
+
+@import '../reset';
+@import '../theme_vars';
+
+.List {
+  display: flex;
+}
+
+.List-item {
+  display: flex;
+  align-items: center;
+}
+
+.List-item + .List-item {
+  margin-left: $Theme-spacing-default;
+}
+
+.List.List--stacked {
+  flex-direction: column;
+
+  .List-item + .List-item {
+    margin: $Theme-spacing-default 0 0;
+  }
+}
