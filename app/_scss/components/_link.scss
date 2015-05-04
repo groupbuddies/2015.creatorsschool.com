@@ -1,0 +1,33 @@
+// Link
+//
+// Link style
+//
+// default - Default link
+// .Link--inverted - To be used in different backgrounds
+//
+// markup:
+// <div class="Link {$modifiers}">Lorem Ipsum</div>
+//
+// Styleguide 1.18
+
+@import '../reset';
+@import '../theme_vars';
+
+$Link-color-default: $Theme-color-tango;
+$Link-color-inverted: $Theme-color-white;
+
+.Link {
+  @include font-properties(base);
+  display: inline-block;
+  color: $Link-color-default;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.Link.Link--inverted {
+  color: $Link-color-inverted;
+}

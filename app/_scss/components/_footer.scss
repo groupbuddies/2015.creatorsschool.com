@@ -1,0 +1,135 @@
+// Footer
+//
+// Styles footer's layout and its inner elements
+//
+// markup:
+// <div class="Footer">
+//   <div class="Footer-actions">
+//     <div class="Footer-logo">
+//       <img src="/img/logo.png">
+//     </div>
+//     <div class="Footer-nav">
+//       <div class="Footer-navLinkGroup">
+//         <div class="Footer-navItem">
+//           PORQUÊ APRENDER A PROGRAMAR
+//         </div>
+//       </div>
+//       <div class="Footer-navItem">
+//         Inscreve-te
+//       </div>
+//     </div>
+//   </div>
+//   <div class="Footer-contacts">
+//     <span class="Footer-heading">
+//       <span class="Footer-highlighted">Contactos</span>
+//     </span>
+//     <span class="Footer-text">
+//       +351 914 676 907
+//     </span>
+//     <span class="Footer-text">
+//       hello@creatorsschool.com
+//     </span>
+//     <div class="Footer-by">
+//       <span class="Footer-heading">
+//         HANDCRAFTED BY <span class="Footer-highlighted">SUBVISUAL</span>
+//       </span>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 1.17
+
+@import '../reset';
+@import '../theme_vars';
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.Footer-actions {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: $Theme-spacing-small $Theme-spacing-small $Theme-spacing-default;
+  background-color: $Theme-color-fiord;
+}
+
+.Footer-contacts {
+  @include diagonal-background(320px, 100px, $Theme-color-fiord, true, top);
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: $Theme-spacing-large $Theme-spacing-small $Theme-spacing-small;
+  background-color: $Theme-color-ripeLemon;
+}
+
+.Footer-heading {
+  @include font-properties(base);
+  color: $Theme-color-fiord;
+  text-transform: uppercase;
+}
+
+.Footer-highlighted {
+  font-weight: $Theme-typography-fontWeight-bold;
+}
+
+.Footer-text {
+  @include font-properties(base);
+  color: $Theme-color-fiord;
+}
+
+.Footer-by {
+  margin-top: $Theme-spacing-small;
+}
+
+.Footer-navLinkGroup {
+  display: none;
+}
+
+.Footer-navItem {
+  margin-top: $Theme-spacing-small;
+}
+
+@include media(">=850px") {
+  .Footer {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .Footer-actions {
+    flex: 1 0 45%;
+    flex-direction: row;
+    align-items: flex-start;
+    width: initial;
+    padding-top: $Theme-spacing-default;
+    padding-bottom: $Theme-spacing-default;
+    padding-left: $Theme-spacing-default;
+  }
+
+  .Footer-contacts {
+    @include diagonal-background(30px, 30px, $Theme-color-fiord, true, top);
+    flex: 1 0 55%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: initial;
+    padding-top: $Theme-spacing-default;
+    padding-bottom: $Theme-spacing-default;
+    padding-right: $Theme-spacing-default;
+  }
+
+  .Footer-nav {
+    margin-top: -$Theme-spacing-small;
+    margin-left: $Theme-spacing-default;
+  }
+
+  .Footer-navLinkGroup {
+    display: flex;
+    flex-direction: column;
+  }
+}

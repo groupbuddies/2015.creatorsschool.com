@@ -22,6 +22,12 @@ $ButtonPrimary-versionOne-hover: darken($ButtonPrimary-versionOne-background, 10
 $ButtonPrimary-versionTwo-background: $Theme-color-tango;
 $ButtonPrimary-versionTwo-color: $Theme-color-white;
 $ButtonPrimary-versionTwo-hover: darken($ButtonPrimary-versionTwo-background, 10);
+$ButtonPrimary-versionThree-background: $Theme-color-pictonBlue;
+$ButtonPrimary-versionThree-color: $Theme-color-white;
+$ButtonPrimary-versionThree-hover: darken($ButtonPrimary-versionThree-background, 10);
+$ButtonPrimary-versionFour-background: $Theme-color-white;
+$ButtonPrimary-versionFour-color: $Theme-color-fiord;
+$ButtonPrimary-versionFour-hover: darken($ButtonPrimary-versionFour-background, 10);
 
 .ButtonPrimary {
   @include font-properties(base);
@@ -60,6 +66,26 @@ $ButtonPrimary-versionTwo-hover: darken($ButtonPrimary-versionTwo-background, 10
   &:hover {
     background-color: $ButtonPrimary-versionTwo-hover;
     color: $ButtonPrimary-versionTwo-color;
+  }
+}
+
+.ButtonPrimary.ButtonPrimary--versionThree {
+  background-color: $ButtonPrimary-versionThree-background;
+  color: $ButtonPrimary-versionThree-color;
+
+  &:hover {
+    background-color: $ButtonPrimary-versionThree-hover;
+    color: $ButtonPrimary-versionThree-color;
+  }
+}
+
+.ButtonPrimary.ButtonPrimary--versionFour {
+  background-color: $ButtonPrimary-versionFour-background;
+  color: $ButtonPrimary-versionFour-color;
+
+  &:hover {
+    background-color: $ButtonPrimary-versionFour-hover;
+    color: $ButtonPrimary-versionFour-color;
   }
 }
 
