@@ -43,6 +43,14 @@
   }
 }
 
+.Layout-smallThenLargeMargin {
+  padding-bottom: $Theme-spacing-small;
+
+  @include media(">=tablet") {
+    padding-bottom: $Theme-spacing-large;
+  }
+}
+
 .Layout-defaultThenLargeMargin {
   padding-bottom: $Theme-spacing-default;
 

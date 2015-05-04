@@ -1,0 +1,29 @@
+- picture: teachers/joao-ferreira.png
+  first_name: João
+  last_name: Ferreira
+  area_class: design
+  area: Design
+
+- picture: teachers/joao-ferreira.png
+  first_name: Bruno
+  last_name: Azevedo
+  area_class: development
+  area: Development
+
+- picture: teachers/joao-ferreira.png
+  first_name: Roberto
+  last_name: Machado
+  area_class: management
+  area: Management
+
+- picture: teachers/joao-ferreira.png
+  first_name: João
+  last_name: Ferreira
+  area_class: design
+  area: Design
+
+- picture: teachers/joao-ferreira.png
+  first_name: Bruno
+  last_name: Azevedo
+  area_class: development
+  area: Development

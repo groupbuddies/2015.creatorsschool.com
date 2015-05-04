@@ -9,6 +9,7 @@
 // .Container--twoColumn - Two column layout; Centers content in each column for small resolutions; Aligns content to the left in each column for large resolutions
 // .Container--swapOnDesktop - Swaps the second column to the first position
 // .Container--verticallyCentered - Centers vertically both columns' content
+// .Container--fullWidth - Container's content occupies full width
 //
 // markup:
 // <div class="Container">
@@ -63,6 +64,12 @@
     .Container-column + .Container-column {
       order: 1;
     }
+  }
+}
+
+.Container.Container--fullWidth {
+  .Container-column {
+    max-width: initial;
   }
 }
 

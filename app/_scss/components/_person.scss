@@ -1,0 +1,144 @@
+// Person
+//
+// Displays a person.
+// Usually contains an image, his/her name and his/her skill area
+//
+// default - Not attached to any area color
+// .Person--design - Displays design colors
+// .Person--developer - Displays developer colors
+// .Person--management - Displays management colors
+//
+// markup:
+// <div class="Person {$modifier}">
+//   <div class="Person-avatar">
+//     <img src="/img/teachers/joao-ferreira.png" class="Person-picture">
+//     <div class="Person-areaShape"></div>
+//   </div>
+//   <div class="Person-bio">
+//     <span class="Person-highlightText">João</span>
+//     <span>Ferreira</span>
+//     <hr class="Person-separator">
+//     <span class="Person-area">Design</span>
+//   </div>
+// </div>
+//
+// Styleguide 1.15
+
+$Person-picture-size: 60px;
+$Person-color-noArea: $Theme-color-heather;
+$Person-color-design: $Theme-color-malachite;
+$Person-color-development: $Theme-color-pictonBlue;
+$Person-color-management: $Theme-color-tango;
+
+@import '../reset';
+@import '../theme_vars';
+
+.Person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Person-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Person-bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.Person-separator {
+  display: inline-block;
+  width: 25px;
+  margin: 5px 0;
+  border: 2px solid $Theme-color-ripeLemon;
+  border-top: 0;
+}
+
+.Person-picture {
+  position: relative;
+  width: $Person-picture-size;
+  height: $Person-picture-size;
+  margin-bottom: $Theme-spacing-small / 2;
+}
+
+.Person-highlightText {
+  display: inline;
+  font-weight: $Theme-typography-fontWeight-bold;
+}
+
+.Person-areaShape {
+  display: none;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 40px solid $Person-color-noArea;
+}
+
+.Person-area {
+  color: $Person-color-noArea;
+  font-weight: $Theme-typography-fontWeight-bold;
+}
+
+.Person.Person--design {
+  .Person-areaShape {
+    border-bottom-color: $Person-color-design;
+  }
+
+  .Person-area {
+    color: $Person-color-design;
+  }
+}
+
+.Person.Person--development {
+  .Person-areaShape {
+    border-bottom-color: $Person-color-development;
+  }
+
+  .Person-area {
+    color: $Person-color-development;
+  }
+}
+
+.Person.Person--management {
+  .Person-areaShape {
+    border-bottom-color: $Person-color-management;
+  }
+
+  .Person-area {
+    color: $Person-color-management;
+  }
+}
+
+@include media(">=tablet") {
+  .Person {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .Person-picture {
+    width: $Person-picture-size * 2;
+    height: $Person-picture-size * 2;
+  }
+
+  .Person-separator {
+    width: 40px;
+    margin: $Theme-spacing-small 0;
+    border-width: 4px;
+  }
+
+  .Person-areaShape {
+    display: block;
+  }
+
+  .Person-bio {
+    align-items: flex-start;
+    margin-left: $Theme-spacing-small;
+  }
+}

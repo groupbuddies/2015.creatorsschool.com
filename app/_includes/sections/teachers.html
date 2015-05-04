@@ -1,0 +1,34 @@
+<section>
+  <div class="Layout">
+    <div class="Layout-defaultMargin"></div>
+    <div class="Container Container--fullWidth">
+      <div class="Container-column">
+        <div class="ContentFormatter ContentFormatter--alignLeftThenCenter">
+          <h2 class="Heading">
+            CONHECE OS TEUS FORMADORES
+          </h2>
+        </div>
+        <div class="Layout-smallThenLargeMargin"></div>
+        <ul class="PersonList">
+          {% for teacher in site.data.teachers %}
+            <li class="PersonList-item">
+              <div class="Person Person--{{teacher.area_class}}">
+                <div class="Person-avatar">
+                  <img src="/img/{{teacher.picture}}" class="Person-picture">
+                  <div class="Person-areaShape"></div>
+                </div>
+                <div class="Person-bio">
+                  <span class="Person-highlightText">{{teacher.first_name}}</span>
+                  <span>{{teacher.last_name}}</span>
+                  <hr class="Person-separator">
+                  <span class="Person-area">{{teacher.area}}</span>
+                </div>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="Layout-defaultMargin"></div>
+  </div>
+</section>

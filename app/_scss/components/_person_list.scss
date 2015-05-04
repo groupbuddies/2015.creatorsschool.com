@@ -1,0 +1,62 @@
+// PersonList
+//
+// Lays out Person components
+//
+// markup:
+// <div class="PersonList">
+//   <div class="PersonList-item">Lorem Ipsum</div>
+//   <div class="PersonList-item">is simply dummy</div>
+// </div>
+//
+// Styleguide 1.16
+
+@import '../reset';
+@import '../theme_vars';
+
+.PersonList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: -$Theme-spacing-small;
+}
+
+.PersonList-item {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  margin-top: $Theme-spacing-small;
+}
+
+.PersonList-item:last-child {
+  align-self: flex-start;
+}
+
+@include media(">=290px") {
+  .PersonList {
+    justify-content: flex-start;
+  }
+}
+
+@include media(">=530px") {
+  .PersonList-item {
+    flex-basis: 33%;
+  }
+}
+
+@include media(">=tablet") {
+  .PersonList {
+    // justify-content: flex-start;
+  }
+
+  .PersonList-item {
+    flex-basis: 50%;
+    margin-top: $Theme-spacing-default;
+  }
+}
+
+@include media(">=925px") {
+  .PersonList-item {
+    flex-basis: 33%;
+  }
+}
