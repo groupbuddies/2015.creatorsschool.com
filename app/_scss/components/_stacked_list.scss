@@ -1,0 +1,23 @@
+// StackedList
+//
+// Stacks items
+//
+// markup:
+// <div class="StackedList">
+//   <div class="StackedList-item">Lorem Ipsum</div>
+//   <div class="StackedList-item">is simply dummy</div>
+// </div>
+//
+// Styleguide 1.13
+
+@import '../reset';
+@import '../theme_vars';
+
+.StackedList {
+  display: flex;
+  flex-direction: column;
+}
+
+.StackedList-item + .StackedList-item {
+  margin-top: $Theme-spacing-default;
+}

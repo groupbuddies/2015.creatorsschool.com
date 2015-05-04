@@ -35,6 +35,14 @@
   }
 }
 
+.Layout-desktopOnly {
+  display: none;
+
+  @include media(">=tablet") {
+    display: block;
+  }
+}
+
 .Layout.Layout--pairs {
   .Layout-image {
     z-index: $Theme-layer-images; // Not sure how to manage this coupling between layers of different components

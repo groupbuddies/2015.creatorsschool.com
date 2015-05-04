@@ -1,0 +1,37 @@
+// Skill
+//
+// Displays a skill; Puts an image followed by the skill name.
+// Also styles cosmetic appearance.
+//
+// markup:
+// <div class="Skill">
+//   <img src="/img/html_css.png" class="Skill-image">
+//   <div class="Skill-legend">html/css</div>
+// </div>
+//
+// Styleguide 1.14
+
+@import '../reset';
+@import '../theme_vars';
+
+.Skill {
+  display: flex;
+  align-items: center;
+}
+
+.Skill-image {
+  display: flex;
+  align-items: center;
+  max-width: 60px;
+  margin-right: $Theme-spacing-small;
+  margin-left: $Theme-spacing-small;
+}
+
+.Skill-legend {
+  color: $Theme-color-heather;
+  font-size: 30px;
+  font-weight: $Theme-typography-fontWeight-bold;
+  letter-spacing: 1.5px;
+  line-height: 1.37;
+  text-transform: uppercase;
+}
