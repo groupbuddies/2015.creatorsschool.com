@@ -77,21 +77,32 @@
   display: flex;
   align-items: center;
   padding: $Theme-spacing-default 0; // not sure if applicable in all the cases
+  overflow: hidden;
 }
 
 .Stripe.Stripe--orange {
-  overflow: hidden;
   background-color: $Theme-color-tango;
 
   @include diagonal-background(320px, 30px, $Theme-color-white, true);
 }
 
 .Stripe.Stripe--green {
-  padding: $Theme-spacing-large 0 0;
-  overflow: hidden;
+  padding: $Theme-spacing-default 0 0;
   background-color: $Theme-color-malachite;
 
   @include diagonal-background(320px, 30px, $Theme-color-white);
+
+  @include media(">=tablet") {
+    padding: $Theme-spacing-large 0 0;
+    @include diagonal-background(1440px, 500px, $Theme-color-white, true, top);
+    @include diagonal-background(1440px, 300px, $Theme-color-white, false, bottom);
+  }
+}
+
+.Stripe.Stripe--blue {
+  background-color: $Theme-color-pictonBlue;
+
+  @include diagonal-background(320px, 30px, $Theme-color-white, true);
 
   @include media(">=tablet") {
     @include diagonal-background(1440px, 500px, $Theme-color-white, true, top);
