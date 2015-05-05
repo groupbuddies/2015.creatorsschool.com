@@ -38,3 +38,21 @@
     text-align: left;
   }
 }
+
+.ContentFormatter.ContentFormatter--centerThenAlignRight {
+  text-align: center;
+}
+
+.ContentFormatter.ContentFormatter--centerThenAlignRight {
+  text-align: center;
+}
+
+@include media(">=tablet") {
+  .ContentFormatter {
+    text-align: center;
+  }
+
+  .ContentFormatter.ContentFormatter--centerThenAlignRight {
+    text-align: right;
+  }
+}

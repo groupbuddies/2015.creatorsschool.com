@@ -15,6 +15,7 @@
 
 $Link-color-default: $Theme-color-tango;
 $Link-color-inverted: $Theme-color-white;
+$Link-color-nav: $Theme-color-tango;
 
 .Link {
   @include font-properties(base);
@@ -30,4 +31,8 @@ $Link-color-inverted: $Theme-color-white;
 
 .Link.Link--inverted {
   color: $Link-color-inverted;
+}
+
+.Link.Link--nav {
+  color: $Link-color-nav;
 }
