@@ -9,9 +9,6 @@ $(function() {
   var $btn = $('#BurgerBtn');
   var $firstFocusableElement = $btn;
   var $lastFocusableElement = $('.NavContent-bottom .NavContent-item:last-child');
-  setNavClass();
-  setOverlayState();
-  setupListeners();
 
   function setNavClass(event) {
     var scroll = $document.scrollTop();
@@ -28,8 +25,8 @@ $(function() {
   }
 
   function toggleMenu(event) {
-    $nav.toggleClass('Nav--away')
-      $nav.toggleClass('Nav--open');
+    $nav.toggleClass('Nav--away');
+    $nav.toggleClass('Nav--open');
     $btn.toggleClass('BurgerBtn--open');
     $nav.find('.Nav-menu').slideToggle(200);
     setOverlayState();
@@ -99,4 +96,8 @@ $(function() {
       $lastFocusableElement.focus();
     }
   }
+
+  setNavClass();
+  setOverlayState();
+  setupListeners();
 });
