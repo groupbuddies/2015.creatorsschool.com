@@ -1,7 +1,9 @@
 {
   "name": "2015csgroupbuddiescom",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "~2.1.4"
+  },
   "devDependencies": {
     "include-media": "~1.1.2"
   }

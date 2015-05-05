@@ -1,0 +1,76 @@
+$BurgerBtn-size: 30px
+$BurgerBtn-inner-size: $BurgerBtn-size * 0.8
+$BurgerBtn-line-height: 3px
+$BurgerBtn-line-width: $BurgerBtn-size
+$BurgerBtn-line-color: $Theme-color-fiord
+
+/** Dangerous math ahead. Touch with care */
+$BurgerBtn-line-left: ($BurgerBtn-size - $BurgerBtn-line-width) * 0.5
+$BurgerBtnLine-top-offset:    ($BurgerBtn-size - ($BurgerBtn-inner-size)) * 0.5
+$BurgerBtnLine-middle-offset: $BurgerBtnLine-top-offset + ($BurgerBtn-inner-size * 0.5)
+$BurgerBtnLine-bottom-offset: $BurgerBtnLine-top-offset + ($BurgerBtn-inner-size)
+
+.BurgerBtn
+  pointer-events: all
+  position: relative
+  width: $BurgerBtn-size
+  height: $BurgerBtn-size
+  display: block
+  border-radius: 50%
+  cursor: pointer
+  opacity: 0.95
+  margin-left: 80px
+  text-decoration: none
+  user-select: none
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+
+  &:before
+    height: $BurgerBtn-size
+    line-height: $BurgerBtn-size
+    text-align: right
+    text-transform: uppercase
+
+.Nav--scrolled,
+.Nav--alwaysOpaque
+  .BurgerBtn:before
+    content: ''
+    display: block
+    width: 80px
+    margin-left: -80px
+
+.Nav--open
+  .BurgerBtn:before
+    display: block
+    width: 200px
+    margin-left: -210px
+
+.BurgerBtn-line
+  position: absolute
+  display: block
+  left: $BurgerBtn-line-left
+  height: $BurgerBtn-line-height
+  width: $BurgerBtn-line-width
+  background-color: $BurgerBtn-line-color
+  transition: all 0.3s
+
+  &:nth-child(1)
+    top: $BurgerBtnLine-top-offset
+  &:nth-child(2)
+    top: $BurgerBtnLine-middle-offset
+  &:nth-child(3)
+    top: $BurgerBtnLine-bottom-offset
+
+.BurgerBtn--open
+  background-color: transparent
+  &:before
+    opacity: 1
+  .BurgerBtn-line
+    &:nth-child(1)
+      transition: all 0.3s
+      transform: rotate(45deg)
+      top: $BurgerBtnLine-middle-offset
+    &:nth-child(2)
+      opacity: 0
+    &:nth-child(3)
+      transform: rotate(-45deg)
+      top: $BurgerBtnLine-middle-offset

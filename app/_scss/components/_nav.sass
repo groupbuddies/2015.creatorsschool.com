@@ -1,3 +1,41 @@
+$Nav-opaque-bg-color: $Theme-color-sky
+
 .Nav
   position: fixed
   z-index: $Theme-layer-nav
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  align-items: flex-start
+  align-content: flex-start
+  width: 100%
+  justify-content: space-between
+  padding: 12px 30px
+  transition: all 0.3s
+
+.Nav-logo
+  opacity: 0
+  transition: opacity 0.3s
+
+.Nav--open
+  height: 100%
+
+.Nav.Nav--scrolled,
+.Nav.Nav--open
+  background-color: $Nav-opaque-bg-color
+  .Nav-logo
+    opacity: 1
+
+@include media("<860px")
+  .Nav-menu
+    display: none
+    width: 100%
+    margin-top: 50px
+
+@include media(">=860px")
+  .Nav-mobileBurger
+    display: none
+  .Nav-menu
+    display: block
+    height: 100%
+

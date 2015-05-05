@@ -1,0 +1,39 @@
+$MenuItems-spacing: 30px
+$MenuItems-separator-color: $Theme-color-grey
+$MenuItems-separator-width: 70px
+$MenuItems-separator-height: 2px
+$MenuItems-separator-space: 25px
+
+@include media("<860px")
+  .MenuItems
+    display: flex
+    flex-direction: column
+    width: 100%
+
+  .MenuItems-item
+    flex: 1
+    width: 100%
+    text-align: center
+
+  .MenuItems-item:not(:last-child)
+    &:after
+      content: ''
+      background-color: $MenuItems-separator-color
+      width: $MenuItems-separator-width
+      height: $MenuItems-separator-height
+      margin: $MenuItems-separator-space auto
+      display: block
+
+
+@include media(">=860px")
+  .MenuItems
+    display: flex
+    flex-direction: row
+    align-items: stretch
+    width: auto
+
+  .MenuItems-item
+    flex-grow: 1
+
+  .MenuItems-item:not(:last-child)
+    margin-right: $MenuItems-spacing

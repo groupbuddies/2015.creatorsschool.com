@@ -17,6 +17,8 @@ $Theme-color-pictonBlue: #2aa7f0;
 $Theme-color-ripeLemon: #f8e02d;
 $Theme-color-tango: #f06f2a;
 $Theme-color-white: #fff;
+$Theme-color-sky: #ccedf2;
+$Theme-color-grey: #b9d6db;
 
 // Color Usage
 $Theme-palette-text-body-default: $Theme-color-paleSky;
@@ -82,7 +84,7 @@ $Theme-font-sizes: (
 }
 
 // Mixins for creating diagonal backgrounds
-@mixin diagonalBackgroundCommonPorperties($v-pad) {
+@mixin diagonalBackgroundCommonProperties($v-pad) {
   position: absolute;
   left: 0;
   width: 100%;
@@ -93,6 +95,7 @@ $Theme-font-sizes: (
   background-position: 0 0px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  pointer-events: none;
 }
 
 @mixin diagonalBackgroundImage($w-int, $h-int, $adjoiningBackgroundColor, $position, $inverted: false) {
@@ -126,7 +129,7 @@ $Theme-font-sizes: (
 
   @if ($position == "top" or $position == "both") {
     &:before {
-      @include diagonalBackgroundCommonPorperties($v-pad);
+      @include diagonalBackgroundCommonProperties($v-pad);
       @include diagonalBackgroundImage($w-int, $h-int, $adjoiningBackgroundColor, top, $inverted);
       content: '';
     }
@@ -134,7 +137,7 @@ $Theme-font-sizes: (
 
   @if ($position == "bottom" or $position == "both") {
     &:after {
-      @include diagonalBackgroundCommonPorperties($v-pad);
+      @include diagonalBackgroundCommonProperties($v-pad);
       @include diagonalBackgroundImage($w-int, $h-int, $adjoiningBackgroundColor, bottom, $inverted);
       content: '';
       z-index: $Theme-layer-hideImages; // I'm assuming that I will only want to hide/clip the bottom part of the container

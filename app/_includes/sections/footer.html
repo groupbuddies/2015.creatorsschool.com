@@ -6,28 +6,28 @@
     <div class="Footer-nav">
       <div class="Footer-navLinkGroup">
         <div class="Footer-navItem">
-          <a href="#" class="Link Link--inverted">
+          <a href="#why" class="Link Link--inverted">
             PORQUÊ APRENDER A PROGRAMAR
           </a>
         </div>
         <div class="Footer-navItem">
-          <a href="#" class="Link Link--inverted">
+          <a href="#how" class="Link Link--inverted">
             COMO VOU APRENDER
           </a>
         </div>
         <div class="Footer-navItem">
-          <a href="#" class="Link Link--inverted">
+          <a href="#what" class="Link Link--inverted">
             O QUE VOU APRENDER
           </a>
         </div>
       </div>
       <div class="Footer-navItem">
-        <a href="#" class="ButtonPrimary ButtonPrimary--versionThree">
+        <a href="{{ site.data.links.registration }}" class="ButtonPrimary ButtonPrimary--versionThree">
           Inscreve-te já
         </a>
       </div>
       <div class="Footer-navItem">
-        <a href="#" class="ButtonPrimary ButtonPrimary--versionFour">
+        <a href="{{ site.data.links.partnership }}" class="ButtonPrimary ButtonPrimary--versionFour">
           Quero ser parceiro
         </a>
       </div>
@@ -38,14 +38,16 @@
       <span class="Footer-highlighted">Contactos</span>
     </span>
     <span class="Footer-text">
-      +351 914 676 907
+      {{ site.data.links.phone }}
     </span>
     <span class="Footer-text">
-      hello@creatorsschool.com
+      <a class="Link Link--text Link--lowercase" href="{{ site.data.links.email_link }}">
+        {{ site.data.links.email }}
+      </a>
     </span>
     <div class="Footer-by">
       <span class="Footer-heading">
-        HANDCRAFTED BY <span class="Footer-highlighted">SUBVISUAL</span>
+        HANDCRAFTED BY <span class="Footer-highlighted"><a class="Link Link--text" href="{{ site.data.links.groupbuddies }}">Group Buddies</a></span>
       </span>
     </div>
   </div>
