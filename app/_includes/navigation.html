@@ -3,13 +3,14 @@
     <object class="Logo Logo--nav" type="image/svg+xml" data="/img/logo.svg"></object>
   </span>
   <div class="Nav-mobileBurger">
-    <a href="/" class="BurgerBtn" id="BurgerBtn">
+    <span id="OpenMenuLabel" class="VisuallyHidden">Open Menu</span>
+    <a href="/" class="BurgerBtn" id="BurgerBtn" aria-controls="Nav-menu" aria-haspopup="true" aria-labelledby="OpenMenuLabel">
       <div class="BurgerBtn-line"></div>
       <div class="BurgerBtn-line"></div>
       <div class="BurgerBtn-line"></div>
     </a>
   </div>
-  <div class="Nav-menu">
+  <div class="Nav-menu" id="Nav-menu">
     <ul class="MenuItems">
       <li class="MenuItems-item"><a href="#" class="Link Link--text">Porquê Programar</a></li>
       <li class="MenuItems-item"><a href="#" class="Link Link--text">Como vou Aprender</a></li>
