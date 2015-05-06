@@ -59,6 +59,14 @@
   }
 }
 
+.Layout-defaultThenLargeMarginWithHeader {
+  padding-bottom: calc(#{$Theme-spacing-default} + #{$Theme-navbar-height});
+
+  @include media(">=tablet") {
+    padding-bottom: calc(#{$Theme-spacing-large} + #{$Theme-navbar-height});
+  }
+}
+
 .Layout-desktopOnly {
   display: none;
 

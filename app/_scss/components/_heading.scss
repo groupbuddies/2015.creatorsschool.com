@@ -32,6 +32,7 @@
   color: $Theme-color-white;
 }
 
-.Heading.Heading--uvp {
+.Heading.Heading--large {
+  @include font-properties(heading);
   text-transform: none;
 }

@@ -1,3 +1,5 @@
+@import '../theme_vars'
+$Nav-height: $Theme-navbar-height
 $Nav-opaque-bg-color: white
 
 .Nav
@@ -8,6 +10,7 @@ $Nav-opaque-bg-color: white
   flex-wrap: wrap
   align-content: flex-start
   width: 100%
+  height: $Nav-height
   justify-content: space-between
   padding: 12px 30px
   transition: all 0.3s
@@ -38,6 +41,7 @@ $Nav-opaque-bg-color: white
   .Nav-mobileBurger
     display: none
   .Nav-menu
-    display: block
+    display: flex
+    align-items: center
     height: 100%
 
