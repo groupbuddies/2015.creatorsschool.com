@@ -121,6 +121,22 @@ svg {
   max-width: 480px;
   padding: 0 25px; }
 
+.Container-largeColumn {
+  -webkit-flex: 1 0 100%;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 900px;
+  padding: 0 25px; }
+
 .Container.Container--twoColumn .Container-column + .Container-column {
   margin-top: 25px; }
 
@@ -356,8 +372,14 @@ svg {
 .Heading.Heading--inverted {
   color: #fff; }
 
-.Heading.Heading--uvp {
+.Heading.Heading--large {
+  font-size: 25px;
+  line-height: 1.55;
   text-transform: none; }
+  @media (min-width: 768px) {
+    .Heading.Heading--large {
+      font-size: 48px;
+      line-height: 1.35; } }
 
 .Layout {
   width: 100%; }
@@ -397,6 +419,12 @@ svg {
   @media (min-width: 768px) {
     .Layout-defaultThenLargeMargin {
       padding-bottom: 100px; } }
+
+.Layout-defaultThenLargeMarginWithHeader {
+  padding-bottom: calc(50px + 60px); }
+  @media (min-width: 768px) {
+    .Layout-defaultThenLargeMarginWithHeader {
+      padding-bottom: calc(100px + 60px); } }
 
 .Layout-desktopOnly {
   display: none; }
@@ -1052,6 +1080,7 @@ svg {
       -ms-flex-line-pack: start;
           align-content: flex-start;
   width: 100%;
+  height: 60px;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1059,16 +1088,24 @@ svg {
   transition: all 0.3s; }
 
 .Nav-logo {
-  opacity: 0;
-  transition: opacity 0.3s; }
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .Nav--open {
   height: 100%; }
 
+.Nav-title {
+  padding-left: 20px; }
+
+.Nav-strongTitle {
+  font-weight: bold; }
+
 .Nav.Nav--scrolled, .Nav.Nav--open {
   background-color: white; }
-  .Nav.Nav--scrolled .Nav-logo, .Nav.Nav--open .Nav-logo {
-    opacity: 1; }
 
 .Nav.Nav--scrolled:not(.Nav--open) {
   box-shadow: 0 2px 0 rgba(50, 50, 50, 0.2); }
@@ -1083,24 +1120,29 @@ svg {
   .Nav-mobileBurger {
     display: none; }
   .Nav-menu {
-    display: block;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 100%; } }
 
 .Scene {
   width: 100%;
-  min-height: 85rem;
-  background-image: url(../img/header.9219.svg);
+  min-height: 75rem;
+  background-image: url(../img/header.5ade.svg);
   background-size: cover;
-  background-position: bottom;
+  background-position: center bottom;
   background-repeat: no-repeat;
-  background-position: center;
   background-color: #ccedf2; }
 
 .Logo {
   width: 150px; }
 
 .Logo.Logo--nav {
-  width: 50px;
+  width: 40px;
+  height: 40px;
   vertical-align: bottom; }
 
 .Logo.Logo--footer {
@@ -1116,7 +1158,6 @@ svg {
   border-radius: 50%;
   cursor: pointer;
   opacity: 0.95;
-  margin-left: 80px;
   text-decoration: none;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1224,8 +1265,8 @@ svg {
   clip: rect(0 0 0 0); }
 
 .Anchor {
-  padding-top: 74px;
-  margin-top: -74px; }
+  padding-top: 60px;
+  margin-top: -60px; }
 
 .Price {
   font-size: 34px; }
