@@ -1,10 +1,16 @@
-$Scene-height: 75rem
+$Scene-height: 900px
 
 .Scene
   width: 100%
-  min-height: $Scene-height
-  background-image: url(../img/header.svg)
   background-size: cover
   background-position: center bottom
   background-repeat: no-repeat
   background-color: #ccedf2
+
+  @media (orientation: landscape)
+    min-height: 130vh
+    background-image: url(../img/header-landscape.svg)
+
+  @media (orientation: portrait)
+    min-height: 100vh
+    background-image: url(../img/header-portrait.svg)
