@@ -16,17 +16,21 @@ $Nav-opaque-bg-color: white
   transition: all 0.3s
 
 .Nav-logo
-  opacity: 0
-  transition: opacity 0.3s
+  display: flex
+  align-items: center
 
 .Nav--open
   height: 100%
 
+.Nav-title
+  padding-left: 20px
+
+.Nav-strongTitle
+  font-weight: bold
+
 .Nav.Nav--scrolled,
 .Nav.Nav--open
   background-color: $Nav-opaque-bg-color
-  .Nav-logo
-    opacity: 1
 
 .Nav.Nav--scrolled:not(.Nav--open)
   box-shadow: 0 2px 0 rgba(50, 50, 50, 0.2)
