@@ -1,6 +1,12 @@
 @import '../theme_vars'
 $Anchor-offset: $Theme-navbar-height
+$Anchor-extra-offset: 50px
 
 .Anchor
   padding-top: $Anchor-offset
   margin-top: -$Anchor-offset
+
+.Anchor.Anchor--extra
+  padding-top: $Anchor-offset + $Anchor-extra-offset
+  margin-top: -$Anchor-offset - $Anchor-extra-offset
+

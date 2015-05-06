@@ -42,6 +42,12 @@ $Link-color-text: $Theme-color-fiord;
   font-size: 16px;
 }
 
+.Link.Link--noUnderline {
+  &:hover {
+    text-decoration: none
+  }
+}
+
 .Link.Link--lowercase {
   text-transform: none;
 }
