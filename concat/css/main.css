@@ -355,6 +355,9 @@ svg {
 .Heading.Heading--inverted {
   color: #fff; }
 
+.Heading.Heading--uvp {
+  text-transform: none; }
+
 .Layout {
   width: 100%; }
 
