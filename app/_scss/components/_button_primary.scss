@@ -42,6 +42,7 @@ $ButtonPrimary-versionFour-hover: darken($ButtonPrimary-versionFour-background, 
   color: $ButtonPrimary-default-color;
   box-shadow: 0 4px 0 rgba($Theme-color-fiord, 0.2);
   font-weight: $Theme-typography-fontWeight-bold;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     background-color: $ButtonPrimary-default-hover;
