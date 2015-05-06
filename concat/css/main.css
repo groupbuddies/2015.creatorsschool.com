@@ -1133,12 +1133,18 @@ svg {
 
 .Scene {
   width: 100%;
-  min-height: 75rem;
-  background-image: url(../img/header.svg);
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-color: #ccedf2; }
+  @media (orientation: landscape) {
+    .Scene {
+      min-height: 130vh;
+      background-image: url(../img/header-landscape.svg); } }
+  @media (orientation: portrait) {
+    .Scene {
+      min-height: 100vh;
+      background-image: url(../img/header-portrait.svg); } }
 
 .Logo {
   width: 150px; }
