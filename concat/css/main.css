@@ -45,7 +45,8 @@ svg {
   background-color: #19d374;
   color: #fff;
   box-shadow: 0 4px 0 rgba(68, 92, 105, 0.2);
-  font-weight: 900; }
+  font-weight: 900;
+  transition: all 0.3s ease-in-out; }
   @media (min-width: 768px) {
     .ButtonPrimary {
       font-size: 16px;
