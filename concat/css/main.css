@@ -483,6 +483,9 @@ svg {
 .Link.Link--nav {
   font-size: 16px; }
 
+.Link.Link--noUnderline:hover {
+  text-decoration: none; }
+
 .Link.Link--lowercase {
   text-transform: none; }
 
@@ -1267,6 +1270,10 @@ svg {
 .Anchor {
   padding-top: 60px;
   margin-top: -60px; }
+
+.Anchor.Anchor--extra {
+  padding-top: 110px;
+  margin-top: -110px; }
 
 .Price {
   font-size: 34px; }
