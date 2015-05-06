@@ -1087,7 +1087,7 @@ svg {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 12px 30px;
+  padding: 12px 20px;
   transition: all 0.3s; }
 
 .Nav-logo {
@@ -1161,8 +1161,8 @@ svg {
 .BurgerBtn {
   pointer-events: all;
   position: relative;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   display: block;
   border-radius: 50%;
   cursor: pointer;
@@ -1174,8 +1174,8 @@ svg {
           user-select: none;
   -webkit-tap-highlight-color: transparent; }
   .BurgerBtn:before {
-    height: 30px;
-    line-height: 30px;
+    height: 20px;
+    line-height: 20px;
     text-align: right;
     text-transform: uppercase; }
 
@@ -1195,15 +1195,15 @@ svg {
   display: block;
   left: 0px;
   height: 3px;
-  width: 30px;
+  width: 20px;
   background-color: #445c69;
   transition: all 0.3s; }
   .BurgerBtn-line:nth-child(1) {
-    top: 3px; }
+    top: 2px; }
   .BurgerBtn-line:nth-child(2) {
-    top: 15px; }
+    top: 10px; }
   .BurgerBtn-line:nth-child(3) {
-    top: 27px; }
+    top: 18px; }
 
 .BurgerBtn--open {
   background-color: transparent; }
@@ -1213,13 +1213,13 @@ svg {
     transition: all 0.3s;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
-    top: 15px; }
+    top: 10px; }
   .BurgerBtn--open .BurgerBtn-line:nth-child(2) {
     opacity: 0; }
   .BurgerBtn--open .BurgerBtn-line:nth-child(3) {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
-    top: 15px; }
+    top: 10px; }
 
 @media (max-width: 859px) {
   .MenuItems {
