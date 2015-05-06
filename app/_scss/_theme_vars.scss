@@ -8,6 +8,13 @@
 // Points of reassembly
 @import 'include-media/dist/include-media';
 
+$breakpoints: (
+  'phone': 320px,
+  'tablet': 768px,
+  'mobileNav': 860px,
+  'desktop': 1024px
+);
+
 // Brand Colors
 $Theme-color-fiord: #445c69;
 $Theme-color-heather: #bec6d3;

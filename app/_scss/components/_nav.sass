@@ -25,13 +25,13 @@ $Nav-opaque-bg-color: $Theme-color-sky
   .Nav-logo
     opacity: 1
 
-@include media("<860px")
+@include media("<mobileNav")
   .Nav-menu
     display: none
     width: 100%
     margin-top: 50px
 
-@include media(">=860px")
+@include media(">=mobileNav")
   .Nav-mobileBurger
     display: none
   .Nav-menu
