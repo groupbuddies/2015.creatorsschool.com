@@ -1022,7 +1022,7 @@ svg {
   line-height: 1.83;
   background-color: #fff;
   color: #627087;
-  font-family: "museo-sans", sans-serif;
+  font-family: "lato", sans-serif;
   font-weight: 500;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -1065,6 +1065,9 @@ svg {
   background-color: white; }
   .Nav.Nav--scrolled .Nav-logo, .Nav.Nav--open .Nav-logo {
     opacity: 1; }
+
+.Nav.Nav--scrolled:not(.Nav--open) {
+  box-shadow: 0 2px 0 rgba(50, 50, 50, 0.2); }
 
 @media (max-width: 859px) {
   .Nav-menu {
