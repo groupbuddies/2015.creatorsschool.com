@@ -38,6 +38,10 @@ $Link-color-text: $Theme-color-fiord;
   color: $Link-color-text;
 }
 
+.Link.Link--nav {
+  font-size: 16px;
+}
+
 .Link.Link--lowercase {
   text-transform: none;
 }
