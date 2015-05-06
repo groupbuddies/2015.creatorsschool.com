@@ -30,6 +30,9 @@ module.exports = function (grunt) {
         tasks: 'babel:server'
       },
       autoprefixer: {
+        options: {
+          browsers: ['last 2 versions', 'ie 8', 'ie 9']
+        },
         files: ['<%= yeoman.app %>/css/**/*.css'],
         tasks: ['copy:stageCss', 'autoprefixer:server']
       },
