@@ -94,3 +94,9 @@ $ButtonPrimary-versionFour-hover: darken($ButtonPrimary-versionFour-background, 
     max-width: 200px;
   }
 }
+
+.ButtonPrimary.ButtonPrimary--mobileCentered {
+  @include media("<tablet") {
+    margin: auto;
+  }
+}

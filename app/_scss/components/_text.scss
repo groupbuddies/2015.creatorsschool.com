@@ -33,3 +33,11 @@ $Text-color-inverted: $Theme-color-white;
   @include font-properties(large);
   font-weight: $Theme-typography-fontWeight-bold;
 }
+
+.Text.Text--veryLarge {
+  @include font-properties(veryLarge);
+}
+
+.Text.Text--small {
+  @include font-properties(small);
+}

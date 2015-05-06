@@ -13,7 +13,7 @@ $(function() {
 
   function setNavClass(event) {
     var scroll = $document.scrollTop();
-    if (scroll > 700 && !$nav.hasClass('Nav--scrolled')) {
+    if (scroll > 100 && !$nav.hasClass('Nav--scrolled')) {
       $nav.addClass('Nav--scrolled');
     } else if (scroll <= 100 && $nav.hasClass('Nav--scrolled')){
       $nav.removeClass('Nav--scrolled');
@@ -23,6 +23,12 @@ $(function() {
   function toggleMenuWithoutPropagation(event) {
     event.preventDefault();
     toggleMenu(event);
+  }
+
+  function closeMenu(event) {
+    if ($nav.hasClass('Nav--open')) {
+      toggleMenu(event);
+    }
   }
 
   function toggleMenu(event) {
@@ -67,7 +73,7 @@ $(function() {
   function setupListeners() {
     $document.on('scroll', setNavClass);
     $btn.on('click', toggleMenuWithoutPropagation);
-    $nav.on('click', '.MenuItems a', toggleMenu);
+    $nav.on('click', '.MenuItems a', closeMenu);
 
     $btn.on('menu-opened', function() {
       $nav.on('keydown', handleLeaveMenu);
