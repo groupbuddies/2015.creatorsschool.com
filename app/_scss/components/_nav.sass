@@ -25,6 +25,9 @@ $Nav-opaque-bg-color: white
   .Nav-logo
     opacity: 1
 
+.Nav.Nav--scrolled:not(.Nav--open)
+  box-shadow: 0 2px 0 rgba(50, 50, 50, 0.2)
+
 @include media("<mobileNav")
   .Nav-menu
     display: none
