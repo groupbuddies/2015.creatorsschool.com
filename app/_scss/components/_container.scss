@@ -48,13 +48,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 900px;
+  max-width: 600px;
   padding: 0 $Theme-spacing-small;
 }
 
 .Container.Container--twoColumn {
   .Container-column + .Container-column {
-    margin-top: $Theme-spacing-small;
+    margin-top: $Theme-spacing-default;
   }
 }
 

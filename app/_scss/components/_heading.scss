@@ -33,6 +33,6 @@
 }
 
 .Heading.Heading--large {
-  @include font-properties(heading);
+  @include font-properties(veryLarge);
   text-transform: none;
 }
