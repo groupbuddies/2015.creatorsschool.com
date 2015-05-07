@@ -36,7 +36,6 @@ $(function() {
     $nav.toggleClass('Nav--open');
     $btn.toggleClass('BurgerBtn--open');
     $menu.slideToggle(200, function() {
-      console.log($menu.css('display'));
       if ($menu.css('display') == 'none') {
         $menu.removeAttr('style');
       }

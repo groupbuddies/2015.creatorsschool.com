@@ -1,3 +1,16 @@
+// BurgerBtn
+//
+// A burger button to be used in a mobile menu
+//
+// markup:
+// <div class="BurgerBtn">
+//   <div class="BurgerBtn-line"></div>
+//   <div class="BurgerBtn-line"></div>
+//   <div class="BurgerBtn-line"></div>
+// </div>
+//
+// Styleguide 1.0
+
 $BurgerBtn-size: 20px
 $BurgerBtn-inner-size: $BurgerBtn-size * 0.8
 $BurgerBtn-line-height: 3px
@@ -23,26 +36,6 @@ $BurgerBtnLine-bottom-offset: $BurgerBtnLine-top-offset + ($BurgerBtn-inner-size
   user-select: none
   -webkit-tap-highlight-color: rgba(0,0,0,0)
 
-  &:before
-    height: $BurgerBtn-size
-    line-height: $BurgerBtn-size
-    text-align: right
-    text-transform: uppercase
-
-.Nav--scrolled,
-.Nav--alwaysOpaque
-  .BurgerBtn:before
-    content: ''
-    display: block
-    width: 80px
-    margin-left: -80px
-
-.Nav--open
-  .BurgerBtn:before
-    display: block
-    width: 200px
-    margin-left: -210px
-
 .BurgerBtn-line
   position: absolute
   display: block
@@ -60,9 +53,6 @@ $BurgerBtnLine-bottom-offset: $BurgerBtnLine-top-offset + ($BurgerBtn-inner-size
     top: $BurgerBtnLine-bottom-offset
 
 .BurgerBtn--open
-  background-color: transparent
-  &:before
-    opacity: 1
   .BurgerBtn-line
     &:nth-child(1)
       transition: all 0.3s

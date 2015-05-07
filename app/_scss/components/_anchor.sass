@@ -1,3 +1,16 @@
+// Anchor
+//
+// Represents a target to an anchor link. It is used to compensate for the space taken up by a fixed top nav. The anchor offsets itself by a similar amount, to make the actual content appear below the nav.
+//
+// default - The default offset amount (roughly equivalent to the nav's height)
+// .Anchor--extra - Extra spacing. Useful when the initial content is not a heading, which would already provide some margin from the nav
+//
+// markup:
+// <div class="Anchor {$modifiers}"></div>
+//
+// Styleguide 1.0
+
+
 @import '../theme_vars'
 $Anchor-offset: $Theme-navbar-height
 $Anchor-extra-offset: 50px
