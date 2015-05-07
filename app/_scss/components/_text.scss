@@ -41,3 +41,7 @@ $Text-color-inverted: $Theme-color-white;
 .Text.Text--small {
   @include font-properties(small);
 }
+
+.Text.Text--emph {
+  font-style: italic;
+}
