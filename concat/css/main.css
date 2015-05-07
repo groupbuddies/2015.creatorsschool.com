@@ -1065,6 +1065,9 @@ svg {
       font-size: 10px;
       line-height: 1.6; } }
 
+.Text.Text--emph {
+  font-style: italic; }
+
 .Theme {
   font-size: 14px;
   line-height: 1.86;
