@@ -41,17 +41,7 @@ $Link-nav-padding: 15px;
 }
 
 .Link.Link--nav {
-  display: flex;
-  align-items: center;
   font-size: 16px;
-  height: $Link-nav-height;
-  padding: 0 $Link-nav-padding;
-
-  &:hover {
-    background-color: $Theme-color-pictonBlue;
-    color: $Theme-color-white;
-    text-decoration: none;
-  }
 }
 
 .Link.Link--noUnderline {
@@ -62,4 +52,20 @@ $Link-nav-padding: 15px;
 
 .Link.Link--lowercase {
   text-transform: none;
+}
+
+@include media(">=mobileNav") {
+  .Link.Link--nav {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    height: $Link-nav-height;
+    padding: 0 $Link-nav-padding;
+
+    &:hover {
+      background-color: $Theme-color-pictonBlue;
+      color: $Theme-color-white;
+      text-decoration: none;
+    }
+  }
 }
