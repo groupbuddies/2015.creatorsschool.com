@@ -183,21 +183,17 @@ svg {
 .ContentFormatter.ContentFormatter--centerThenAlignLeft {
   text-align: center; }
 
+.ContentFormatter.ContentFormatter--centerThenAlignRight {
+  text-align: center; }
+
+.ContentFormatter.ContentFormatter--centerThenAlignRight {
+  text-align: center; }
+
 @media (min-width: 768px) {
   .ContentFormatter {
     text-align: center; }
   .ContentFormatter.ContentFormatter--centerThenAlignLeft {
-    text-align: left; } }
-
-.ContentFormatter.ContentFormatter--centerThenAlignRight {
-  text-align: center; }
-
-.ContentFormatter.ContentFormatter--centerThenAlignRight {
-  text-align: center; }
-
-@media (min-width: 768px) {
-  .ContentFormatter {
-    text-align: center; }
+    text-align: left; }
   .ContentFormatter.ContentFormatter--centerThenAlignRight {
     text-align: right; } }
 
@@ -488,6 +484,22 @@ svg {
 
 .Link.Link--lowercase {
   text-transform: none; }
+
+@media (min-width: 860px) {
+  .Link.Link--nav {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 16px;
+    height: 40px;
+    padding: 0 15px; }
+    .Link.Link--nav:hover {
+      background-color: #2aa7f0;
+      color: #fff;
+      text-decoration: none; } }
 
 .List {
   display: -webkit-flex;
