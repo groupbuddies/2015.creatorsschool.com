@@ -499,7 +499,8 @@ svg {
     .Link.Link--nav:hover {
       background-color: #2aa7f0;
       color: #fff;
-      text-decoration: none; } }
+      text-decoration: none;
+      transition: background-color 0.5s, color 0.5s; } }
 
 .List {
   display: -webkit-flex;
