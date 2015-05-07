@@ -1135,8 +1135,7 @@ svg {
   width: 100%;
   background-size: cover;
   background-position: center bottom;
-  background-repeat: no-repeat;
-  background-color: #ccedf2; }
+  background-repeat: no-repeat; }
   @media (orientation: landscape) {
     .Scene {
       min-height: 130vh;
@@ -1173,22 +1172,6 @@ svg {
       -ms-user-select: none;
           user-select: none;
   -webkit-tap-highlight-color: transparent; }
-  .BurgerBtn:before {
-    height: 20px;
-    line-height: 20px;
-    text-align: right;
-    text-transform: uppercase; }
-
-.Nav--scrolled .BurgerBtn:before, .Nav--alwaysOpaque .BurgerBtn:before {
-  content: '';
-  display: block;
-  width: 80px;
-  margin-left: -80px; }
-
-.Nav--open .BurgerBtn:before {
-  display: block;
-  width: 200px;
-  margin-left: -210px; }
 
 .BurgerBtn-line {
   position: absolute;
@@ -1205,21 +1188,17 @@ svg {
   .BurgerBtn-line:nth-child(3) {
     top: 18px; }
 
-.BurgerBtn--open {
-  background-color: transparent; }
-  .BurgerBtn--open:before {
-    opacity: 1; }
-  .BurgerBtn--open .BurgerBtn-line:nth-child(1) {
-    transition: all 0.3s;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    top: 10px; }
-  .BurgerBtn--open .BurgerBtn-line:nth-child(2) {
-    opacity: 0; }
-  .BurgerBtn--open .BurgerBtn-line:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    top: 10px; }
+.BurgerBtn--open .BurgerBtn-line:nth-child(1) {
+  transition: all 0.3s;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 10px; }
+.BurgerBtn--open .BurgerBtn-line:nth-child(2) {
+  opacity: 0; }
+.BurgerBtn--open .BurgerBtn-line:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 10px; }
 
 @media (max-width: 859px) {
   .MenuItems {
