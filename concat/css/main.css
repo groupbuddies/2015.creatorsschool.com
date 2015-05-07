@@ -1142,7 +1142,7 @@ svg {
       background-image: url(../img/header-landscape.svg); } }
   @media (orientation: portrait) {
     .Scene {
-      min-height: 100vh;
+      min-height: 110vh;
       background-image: url(../img/header-portrait.svg); } }
 
 .Logo {
