@@ -66,6 +66,7 @@ $Link-nav-padding: 15px;
       background-color: $Theme-color-pictonBlue;
       color: $Theme-color-white;
       text-decoration: none;
+      transition: background-color 0.5s, color 0.5s;
     }
   }
 }
