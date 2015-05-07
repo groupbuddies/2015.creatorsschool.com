@@ -28,7 +28,7 @@ svg {
 
 .ButtonPrimary {
   font-size: 14px;
-  line-height: 1.83;
+  line-height: 1.86;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -134,11 +134,11 @@ svg {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 900px;
+  max-width: 600px;
   padding: 0 25px; }
 
 .Container.Container--twoColumn .Container-column + .Container-column {
-  margin-top: 25px; }
+  margin-top: 50px; }
 
 .Container.Container--verticallyCentered .Container-column {
   -webkit-justify-content: center;
@@ -259,7 +259,7 @@ svg {
 
 .Footer-heading {
   font-size: 14px;
-  line-height: 1.83;
+  line-height: 1.86;
   color: #445c69;
   text-transform: uppercase; }
   @media (min-width: 768px) {
@@ -272,7 +272,7 @@ svg {
 
 .Footer-text {
   font-size: 14px;
-  line-height: 1.83;
+  line-height: 1.86;
   color: #445c69; }
   @media (min-width: 768px) {
     .Footer-text {
@@ -350,7 +350,7 @@ svg {
 
 .Heading {
   font-size: 20px;
-  line-height: 1.55;
+  line-height: 1.6;
   font-weight: 900;
   text-transform: uppercase;
   width: 100%;
@@ -362,7 +362,7 @@ svg {
 
 .Heading.Heading--small {
   font-size: 14px;
-  line-height: 1.83;
+  line-height: 1.86;
   color: #445c69; }
   @media (min-width: 768px) {
     .Heading.Heading--small {
@@ -373,12 +373,12 @@ svg {
   color: #fff; }
 
 .Heading.Heading--large {
-  font-size: 25px;
-  line-height: 1.55;
+  font-size: 24px;
+  line-height: 1.5;
   text-transform: none; }
   @media (min-width: 768px) {
     .Heading.Heading--large {
-      font-size: 48px;
+      font-size: 34px;
       line-height: 1.35; } }
 
 .Layout {
@@ -462,7 +462,7 @@ svg {
 
 .Link {
   font-size: 14px;
-  line-height: 1.83;
+  line-height: 1.86;
   display: inline-block;
   color: #f06f2a;
   text-decoration: none;
@@ -682,7 +682,7 @@ svg {
 
 .Quote-content {
   font-size: 20px;
-  line-height: 1.55;
+  line-height: 1.6;
   color: #f06f2a; }
   @media (min-width: 768px) {
     .Quote-content {
@@ -1016,7 +1016,7 @@ svg {
 
 .Text {
   font-size: 14px;
-  line-height: 1.83;
+  line-height: 1.86;
   color: #627087;
   font-weight: 300; }
   @media (min-width: 768px) {
@@ -1029,7 +1029,7 @@ svg {
 
 .Text.Text--large {
   font-size: 20px;
-  line-height: 1.55;
+  line-height: 1.6;
   font-weight: 900; }
   @media (min-width: 768px) {
     .Text.Text--large {
@@ -1037,24 +1037,24 @@ svg {
       line-height: 1.45; } }
 
 .Text.Text--veryLarge {
-  font-size: 30px;
-  line-height: 1.55; }
+  font-size: 24px;
+  line-height: 1.5; }
   @media (min-width: 768px) {
     .Text.Text--veryLarge {
       font-size: 34px;
-      line-height: 1.55; } }
+      line-height: 1.35; } }
 
 .Text.Text--small {
   font-size: 10px;
-  line-height: 1.625; }
+  line-height: 1.6; }
   @media (min-width: 768px) {
     .Text.Text--small {
       font-size: 10px;
-      line-height: 1.625; } }
+      line-height: 1.6; } }
 
 .Theme {
   font-size: 14px;
-  line-height: 1.83;
+  line-height: 1.86;
   background-color: #fff;
   color: #627087;
   font-family: "lato", sans-serif;
