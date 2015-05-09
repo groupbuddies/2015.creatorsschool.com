@@ -36,3 +36,7 @@
   @include font-properties(veryLarge);
   text-transform: none;
 }
+
+.Heading.Heading--alternative {
+  color: $Theme-color-tango
+}
