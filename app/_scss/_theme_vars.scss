@@ -114,59 +114,133 @@ $Theme-font-sizes: (
   position: absolute;
   left: 0;
   width: 100%;
-  height: #{$v-pad}%;
-  // FIXME TODO use padding instead of height; change width and height passed into the mixins; this way the angles behave as expected; althought the content needs to force its height somehow
-  // padding: #{$v-pad}% 0 0;
-  // FIXME: unfortunately I don't know how to fix the empty space that sometimes (depends on the screen width) appears between the background-image and the bottom of this element
-  background-position: 0 0px;
+  padding-top: $v-pad;
+  background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   pointer-events: none;
 }
 
-@mixin diagonalBackgroundImage($w-int, $h-int, $adjoiningBackgroundColor, $position, $inverted: false) {
+@mixin diagonalBackgroundImage($adjoiningBackgroundColor, $position, $inverted: false) {
   $triangle: "";
   $triangle-color: 'rgb(#{red($adjoiningBackgroundColor)}, #{green($adjoiningBackgroundColor)}, #{blue($adjoiningBackgroundColor)})';
   @if ($position == "top") {
     top: 0;
     @if ($inverted == false) {
-      $triangle: '<polygon points="0,0 #{$w-int},0 #{$w-int},#{$h-int}" style="fill:#{$triangle-color};"></polygon>';
+      $triangle: '<polygon points="0,0 1,0 1,1" style="fill:#{$triangle-color};"></polygon>';
     } @else {
-      $triangle: '<polygon points="0,0 0,#{$h-int} #{$w-int},0" style="fill:#{$triangle-color};"></polygon>';
+      $triangle: '<polygon points="0,0 0,1 1,0" style="fill:#{$triangle-color};"></polygon>';
     }
   } @else if ($position == "bottom") {
     bottom: 0;
     @if ($inverted == false) {
-      $triangle: '<polygon points="0,0 0,#{$h-int} #{$w-int},#{$h-int}" style="fill:#{$triangle-color};"></polygon>';
+      $triangle: '<polygon points="0,0 0,1 1,1" style="fill:#{$triangle-color};"></polygon>';
     } @else {
-      $triangle: '<polygon points="0,#{$h-int} #{$w-int},#{$h-int} #{$w-int},0" style="fill:#{$triangle-color};"></polygon>';
+      $triangle: '<polygon points="0,1 1,1 1,0" style="fill:#{$triangle-color};"></polygon>';
     }
   }
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="#{$w-int}" height="#{$h-int}" viewBox="0 0 #{$w-int} #{$h-int}" version="1.1">#{$triangle}</svg>');
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="1" height="1" viewBox="0 0 1 1" version="1.1">#{$triangle}</svg>');
 }
 
-@mixin diagonal-background($width, $height, $adjoiningBackgroundColor, $inverted: false, $position: "both") {
-  $w-int: $width/1px;
-  $h-int: $height/1px;
-  // floors the number to 3 decimal
-  $v-pad: (floor(($height / $width) * 100000) / 100000) * 100;
-
+@mixin diagonal-background($adjoiningBackgroundColor, $inverted: false, $position: "both", $startContentAfterTriangle: true, $forceFullHeight: false) {
   position: relative;
 
   @if ($position == "top" or $position == "both") {
+    padding-top: 30px;
+
     &:before {
-      @include diagonalBackgroundCommonProperties($v-pad);
-      @include diagonalBackgroundImage($w-int, $h-int, $adjoiningBackgroundColor, top, $inverted);
+      @include diagonalBackgroundCommonProperties(30px);
+      @include diagonalBackgroundImage($adjoiningBackgroundColor, top, $inverted);
       content: '';
+      @if ($forceFullHeight == true) {
+        height: 100%;
+      }
+    }
+
+    @include media(">=450px") {
+      padding-top: 45px;
+
+      &:before {
+        @include diagonalBackgroundCommonProperties(45px);
+      }
+    }
+
+    @include media(">=tablet") {
+      padding-top: 60px;
+
+      &:before {
+        @include diagonalBackgroundCommonProperties(60px);
+      }
+    }
+
+    @include media(">=912px") {
+      @if ($startContentAfterTriangle == true) {
+        padding-top: 90px;
+      }
+
+      &:before {
+        @include diagonalBackgroundCommonProperties(90px);
+      }
+    }
+
+    @include media(">=desktop") {
+      @if ($startContentAfterTriangle == true) {
+        padding-top: 120px;
+      }
+
+      &:before {
+        @include diagonalBackgroundCommonProperties(120px);
+      }
     }
   }
 
   @if ($position == "bottom" or $position == "both") {
+    padding-bottom: 30px;
+
     &:after {
-      @include diagonalBackgroundCommonProperties($v-pad);
-      @include diagonalBackgroundImage($w-int, $h-int, $adjoiningBackgroundColor, bottom, $inverted);
+      @include diagonalBackgroundCommonProperties(30px);
+      @include diagonalBackgroundImage($adjoiningBackgroundColor, bottom, $inverted);
       content: '';
       z-index: $Theme-layer-hideImages; // I'm assuming that I will only want to hide/clip the bottom part of the container
+      @if ($forceFullHeight == true) {
+        height: 100%;
+      }
+    }
+
+    @include media(">=450px") {
+      padding-bottom: 45px;
+
+      &:after {
+        @include diagonalBackgroundCommonProperties(45px);
+      }
+    }
+
+    @include media(">=tablet") {
+      padding-bottom: 60px;
+
+      &:after {
+        @include diagonalBackgroundCommonProperties(60px);
+      }
+    }
+
+    @include media(">=912px") {
+      @if ($startContentAfterTriangle == true) {
+        padding-bottom: 90px;
+      }
+
+      &:after {
+        @include diagonalBackgroundCommonProperties(90px);
+      }
+    }
+
+    @include media(">=desktop") {
+      @if ($startContentAfterTriangle == true) {
+        padding-bottom: 120px;
+      }
+
+      &:after {
+        @include diagonalBackgroundCommonProperties(120px);
+      }
     }
   }
 }

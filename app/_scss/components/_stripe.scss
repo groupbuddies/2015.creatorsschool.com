@@ -25,49 +25,43 @@
 .Stripe.Stripe--orange {
   background-color: $Theme-color-tango;
 
-  @include diagonal-background(320px, 30px, $Theme-color-white, true);
+  @include diagonal-background($Theme-color-white, true);
 }
 
 .Stripe.Stripe--green {
-  padding: $Theme-spacing-default 0 0;
   background-color: $Theme-color-malachite;
 
-  @include diagonal-background(320px, 30px, $Theme-color-white);
+  @include diagonal-background($Theme-color-white);
 
   @include media(">=tablet") {
-    padding: $Theme-spacing-large 0 0;
-    @include diagonal-background(1440px, 500px, $Theme-color-white, true, top);
-    @include diagonal-background(1440px, 300px, $Theme-color-white, false, bottom);
+    @include diagonal-background($Theme-color-white, true, top, false);
+    @include diagonal-background($Theme-color-white, false, bottom, false);
   }
 }
 
 .Stripe.Stripe--blue {
   background-color: $Theme-color-pictonBlue;
 
-  @include diagonal-background(320px, 30px, $Theme-color-white, true);
+  @include diagonal-background($Theme-color-white, true);
 
   @include media(">=tablet") {
-    @include diagonal-background(1440px, 500px, $Theme-color-white, true, top);
-    @include diagonal-background(1440px, 300px, $Theme-color-white, false, bottom);
+    @include diagonal-background($Theme-color-white, true, top);
+    @include diagonal-background($Theme-color-white, false, bottom);
   }
 }
 
 .Stripe.Stripe--yellow {
   background-color: $Theme-color-ripeLemon;
 
-  @include diagonal-background(320px, 30px, $Theme-color-white);
+  @include diagonal-background($Theme-color-white);
 
   @include media(">=tablet") {
-    @include diagonal-background(1440px, 500px, $Theme-color-white, false, top);
-    @include diagonal-background(1440px, 300px, $Theme-color-white, true, bottom);
+    @include diagonal-background($Theme-color-white, false, top);
+    @include diagonal-background($Theme-color-white, true, bottom);
   }
 }
 
 @include media(">=tablet") {
-  .Stripe {
-    padding: $Theme-spacing-large 0;
-  }
-
   .Stripe.Stripe--mobileOnly {
     display: none;
   }

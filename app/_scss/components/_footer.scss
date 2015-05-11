@@ -19,20 +19,22 @@
 //       </div>
 //     </div>
 //   </div>
-//   <div class="Footer-contacts">
-//     <span class="Footer-heading">
-//       <span class="Footer-highlighted">Contactos</span>
-//     </span>
-//     <span class="Footer-text">
-//       +351 914 676 907
-//     </span>
-//     <span class="Footer-text">
-//       hello@creatorsschool.com
-//     </span>
-//     <div class="Footer-by">
+//   <div class="Footer-contactsContainer">
+//     <div class="Footer-contactsContainer">
 //       <span class="Footer-heading">
-//         HANDCRAFTED BY <span class="Footer-highlighted">SUBVISUAL</span>
+//         <span class="Footer-highlighted">Contactos</span>
 //       </span>
+//       <span class="Footer-text">
+//         +351 914 676 907
+//       </span>
+//       <span class="Footer-text">
+//         hello@creatorsschool.com
+//       </span>
+//       <div class="Footer-by">
+//         <span class="Footer-heading">
+//           HANDCRAFTED BY <span class="Footer-highlighted">SUBVISUAL</span>
+//         </span>
+//       </div>
 //     </div>
 //   </div>
 // </div>
@@ -59,14 +61,17 @@
   background-color: $Theme-color-fiord;
 }
 
+.Footer-contactsContainer {
+  @include diagonal-background($Theme-color-fiord, true, top);
+  width: 100%;
+  background-color: $Theme-color-ripeLemon;
+}
+
 .Footer-contacts {
-  @include diagonal-background(320px, 100px, $Theme-color-fiord, true, top);
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: $Theme-spacing-large $Theme-spacing-small $Theme-spacing-small;
-  background-color: $Theme-color-ripeLemon;
+  padding: $Theme-spacing-small;
 }
 
 .Footer-heading {
@@ -112,15 +117,19 @@
     padding-left: $Theme-spacing-default;
   }
 
-  .Footer-contacts {
-    @include diagonal-background(30px, 30px, $Theme-color-fiord, true, top);
+  .Footer-contactsContainer {
+    @include diagonal-background($Theme-color-fiord, true, top, $forceFullHeight: true);
     flex: 1 0 55%;
+    display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
     width: initial;
+  }
+
+  .Footer-contacts {
     padding-top: $Theme-spacing-default;
     padding-bottom: $Theme-spacing-default;
     padding-right: $Theme-spacing-default;
+    text-align: right;
   }
 
   .Footer-nav {

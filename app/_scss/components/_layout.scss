@@ -79,37 +79,57 @@
   .Layout-image {
     z-index: $Theme-layer-images; // Not sure how to manage this coupling between layers of different components
     width: 100%;
-    margin-bottom: -80px;
+    margin-bottom: -125px;
     text-align: center;
 
+    @include media(">=450px") {
+      margin-bottom: -135px;
+    }
+
     @include media(">=tablet") {
-      margin-top: 80px;
-      margin-bottom: -55px;
+      margin-top: 70px;
+      margin-bottom: -200px;
     }
 
-    @include media(">=828px") {
-      margin-top: $Theme-spacing-default;
-      margin-bottom: -80px;
+    @include media(">=785px") {
+      margin-top: 35px;
     }
 
-    @include media(">=950px") {
-      margin-top: $Theme-spacing-small;
+    @include media(">=805px") {
+      margin-top: 30px;
+    }
+
+    @include media(">=850px") {
+      margin-top: 20px;
+    }
+
+    @include media(">=875px") {
+      margin-top: 10px;
+    }
+
+    @include media(">=912px") {
+      margin-top: 0;
+      margin-bottom: -155px;
+    }
+
+    @include media(">=desktop") {
+      margin-bottom: -140px;
+    }
+
+    @include media(">=1400px") {
+      margin-bottom: -150px;
     }
   }
 
   .Layout-text {
-    padding-bottom: $Theme-spacing-small;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: $Theme-spacing-small;
 
-    @include media(">=828px") {
-      padding-bottom: $Theme-spacing-default;
-    }
-
-    @include media(">=desktop") {
-      padding-bottom: $Theme-spacing-large;
+    @include media(">=tablet") {
+      padding-top: 0;
     }
   }
-}
-
-.Layout.Layout--fullHeight {
-  height: 100%;
 }
