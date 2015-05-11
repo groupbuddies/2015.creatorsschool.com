@@ -1900,7 +1900,7 @@ svg {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 12px 20px;
-  transition: all 0.3s; }
+  transition: all 0.2s; }
 
 .Nav-logo {
   display: -webkit-flex;
