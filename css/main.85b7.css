@@ -1951,11 +1951,11 @@ svg {
   @media (orientation: landscape) {
     .Scene {
       min-height: 130vh;
-      background-image: url(../img/header-landscape.svg); } }
+      background-image: url(../img/header-landscape.5ade.svg); } }
   @media (orientation: portrait) {
     .Scene {
       min-height: 110vh;
-      background-image: url(../img/header-portrait.svg); } }
+      background-image: url(../img/header-portrait.ffa1.svg); } }
 
 .Logo {
   width: 150px; }
