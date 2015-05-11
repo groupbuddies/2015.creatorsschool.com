@@ -9,7 +9,7 @@ $(function() {
   var $menu = $('#Nav-menu')
   var $btn = $('#BurgerBtn');
   var $firstFocusableElement = $btn;
-  var $lastFocusableElement = $('.NavContent-bottom .NavContent-item:last-child');
+  var $lastFocusableElement = $('.MenuItems-item:last-child a');
 
   function setNavClass(event) {
     var scroll = $document.scrollTop();
@@ -32,7 +32,6 @@ $(function() {
   }
 
   function toggleMenu(event) {
-    $nav.toggleClass('Nav--away');
     $nav.toggleClass('Nav--open');
     $btn.toggleClass('BurgerBtn--open');
     $menu.slideToggle(200, function() {
@@ -57,14 +56,8 @@ $(function() {
 
   function setOverlayState() {
     if ($btn.hasClass('BurgerBtn--open')) {
-      $('.Nav-overlay').attr('aria-hidden', 'false');
-      $('a, input', '.Nav-overlay').attr('tabindex', '0');
-      $('#mce-hidden-input').attr('tabindex', '-1');
-      $('.Nav-overlay a').first().focus();
       $btn.removeAttr('aria-labelledby');
     } else {
-      $('.Nav-overlay').attr('aria-hidden', 'true');
-      $('a, input', '.Nav-overlay').attr('tabindex', '-1');
       $btn.attr('aria-labelledby', 'OpenMenuLabel');
     }
   }
