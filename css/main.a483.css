@@ -345,8 +345,8 @@ svg {
             flex-direction: column; } }
 
 .Heading {
-  font-size: 20px;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.66;
   font-weight: 900;
   text-transform: uppercase;
   width: 100%;
@@ -376,6 +376,9 @@ svg {
     .Heading.Heading--large {
       font-size: 34px;
       line-height: 1.35; } }
+
+.Heading.Heading--alternative {
+  color: #f06f2a; }
 
 .Layout {
   width: 100%; }
@@ -417,10 +420,10 @@ svg {
       padding-bottom: 100px; } }
 
 .Layout-defaultThenLargeMarginWithHeader {
-  padding-bottom: calc(50px + 60px); }
+  padding-bottom: calc(25px + 60px); }
   @media (min-width: 768px) {
     .Layout-defaultThenLargeMarginWithHeader {
-      padding-bottom: calc(100px + 60px); } }
+      padding-bottom: calc(50px + 60px); } }
 
 .Layout-desktopOnly {
   display: none; }
@@ -694,8 +697,8 @@ svg {
           align-items: center; }
 
 .Quote-content {
-  font-size: 20px;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.66;
   color: #f06f2a; }
   @media (min-width: 768px) {
     .Quote-content {
@@ -1041,8 +1044,8 @@ svg {
   color: #fff; }
 
 .Text.Text--large {
-  font-size: 20px;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.66;
   font-weight: 900; }
   @media (min-width: 768px) {
     .Text.Text--large {
