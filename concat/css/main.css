@@ -636,7 +636,8 @@ svg {
   display: flex;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  margin: 0; }
 
 .List-item + .List-item {
   margin-left: 50px; }
@@ -646,7 +647,47 @@ svg {
       -ms-flex-direction: column;
           flex-direction: column; }
   .List.List--stacked .List-item + .List-item {
-    margin: 50px 0 0; }
+    margin-top: 50px;
+    margin-left: 0; }
+
+.List.List--partnerLogos {
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .List.List--partnerLogos .List-item {
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+  .List.List--partnerLogos .List-item + .List-item {
+    margin-top: 25px;
+    margin-left: 0; }
+  @media (min-width: 768px) {
+    .List.List--partnerLogos {
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-align-items: flex-end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .List.List--partnerLogos .List-item + .List-item {
+        margin-top: 0;
+        margin-left: 50px; } }
+
+.List.List--stacked.List--centered {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.List.List--small .List-item + .List-item {
+  margin-left: 25px; }
+.List.List--small.List--stacked .List-item + .List-item {
+  margin-top: 25px; }
 
 .Person {
   display: -webkit-flex;
@@ -850,15 +891,33 @@ svg {
 .RatioEnforcer.RatioEnforcer--diamondStats {
   max-width: 319px; }
 
-.RatioEnforcer.RatioEnforcer--subvisualLogo {
-  max-width: 58px;
-  max-height: 84px; }
+.RatioEnforcer.RatioEnforcer--genLogo {
+  max-width: 148px; }
 
-.RatioEnforcer.RatioEnforcer--blipLogo {
-  max-width: 116px; }
+.RatioEnforcer.RatioEnforcer--sageLogo {
+  max-width: 115px; }
 
-.RatioEnforcer.RatioEnforcer--otherLogo {
-  max-width: 93px; }
+.RatioEnforcer.RatioEnforcer--topdocsLogo {
+  max-width: 137px; }
+
+.RatioEnforcer.RatioEnforcer--wiremazeLogo {
+  max-width: 182px; }
+
+.RatioEnforcer.RatioEnforcer--canalSuperiorLogo {
+  max-width: 85px;
+  min-width: 85px; }
+
+.RatioEnforcer.RatioEnforcer--portoIOLogo {
+  max-width: 116px;
+  min-width: 116px; }
+
+.RatioEnforcer.RatioEnforcer--stukIOLogo {
+  max-width: 103px;
+  min-width: 103px; }
+
+.RatioEnforcer.RatioEnforcer--landingJobsLogo {
+  max-width: 171px;
+  min-width: 171px; }
 
 .RatioEnforcer.RatioEnforcer--batmanRobin {
   max-width: 281px; }
@@ -1860,6 +1919,15 @@ svg {
     .Text.Text--small {
       font-size: 10px;
       line-height: 1.6; } }
+
+.Text.Text--highlight {
+  font-size: 18px;
+  line-height: 1.66;
+  color: #f06f2a; }
+  @media (min-width: 768px) {
+    .Text.Text--highlight {
+      font-size: 22px;
+      line-height: 1.45; } }
 
 .Text.Text--emph {
   font-style: italic; }
