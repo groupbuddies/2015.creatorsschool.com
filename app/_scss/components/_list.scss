@@ -4,6 +4,9 @@
 //
 // default - Row direction
 // .List--stacked - Column direction
+// .List--stacked.List--centered - Column direction and content is centered
+// .List--small - Smaller margins
+// .List--partnerLogos - Stacked in mobile and horizontal in desktop; Aligns vertically its items to the bottom
 //
 // markup:
 // <div class="List {$modifiers}">
@@ -24,6 +27,8 @@
 .List-item {
   display: flex;
   align-items: center;
+
+  margin: 0;
 }
 
 .List-item + .List-item {
@@ -34,6 +39,48 @@
   flex-direction: column;
 
   .List-item + .List-item {
-    margin: $Theme-spacing-default 0 0;
+    margin-top: $Theme-spacing-default;
+    margin-left: 0;
+  }
+}
+
+.List.List--partnerLogos {
+  flex-direction: column;
+  align-items: center;
+
+  .List-item {
+    align-items: flex-end;
+  }
+
+  .List-item + .List-item {
+    margin-top: $Theme-spacing-small;
+    margin-left: 0;
+  }
+
+  @include media(">=tablet") {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+
+    .List-item + .List-item {
+      margin-top: 0;
+      margin-left: $Theme-spacing-default;
+    }
+  }
+}
+
+.List.List--stacked.List--centered {
+  align-items: center;
+}
+
+.List.List--small {
+  .List-item + .List-item {
+    margin-left: $Theme-spacing-small;
+  }
+
+  &.List--stacked {
+    .List-item + .List-item {
+      margin-top: $Theme-spacing-small;
+    }
   }
 }

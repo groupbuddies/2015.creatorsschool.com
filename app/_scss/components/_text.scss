@@ -42,6 +42,11 @@ $Text-color-inverted: $Theme-color-white;
   @include font-properties(small);
 }
 
+.Text.Text--highlight {
+  @include font-properties(large);
+  color: $Theme-color-tango;
+}
+
 .Text.Text--emph {
   font-style: italic;
 }

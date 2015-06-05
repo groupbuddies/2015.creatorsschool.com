@@ -24,17 +24,40 @@
   max-width: 319px; // value extracted from the actual SVG source
 }
 
-.RatioEnforcer.RatioEnforcer--subvisualLogo {
-  max-width: 58px; // value extracted from the actual source
-  max-height: 84px; // value extracted from the actual source
+.RatioEnforcer.RatioEnforcer--genLogo {
+  max-width: 148px;
 }
 
-.RatioEnforcer.RatioEnforcer--blipLogo {
-  max-width: 116px; // value extracted from the actual source
+.RatioEnforcer.RatioEnforcer--sageLogo {
+  max-width: 115px;
 }
 
-.RatioEnforcer.RatioEnforcer--otherLogo {
-  max-width: 93px; // value extracted from the actual source
+.RatioEnforcer.RatioEnforcer--topdocsLogo {
+  max-width: 137px;
+}
+
+.RatioEnforcer.RatioEnforcer--wiremazeLogo {
+  max-width: 182px;
+}
+
+.RatioEnforcer.RatioEnforcer--canalSuperiorLogo {
+  max-width: 85px;
+  min-width: 85px;
+}
+
+.RatioEnforcer.RatioEnforcer--portoIOLogo {
+  max-width: 116px;
+  min-width: 116px;
+}
+
+.RatioEnforcer.RatioEnforcer--stukIOLogo {
+  max-width: 103px;
+  min-width: 103px;
+}
+
+.RatioEnforcer.RatioEnforcer--landingJobsLogo {
+  max-width: 171px;
+  min-width: 171px;
 }
 
 .RatioEnforcer.RatioEnforcer--batmanRobin {
