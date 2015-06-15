@@ -634,9 +634,9 @@ svg {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin: 0; }
 
 .List-item + .List-item {
@@ -687,7 +687,8 @@ svg {
 .List.List--small .List-item + .List-item {
   margin-left: 25px; }
 .List.List--small.List--stacked .List-item + .List-item {
-  margin-top: 25px; }
+  margin-top: 25px;
+  margin-left: 0; }
 
 .Person {
   display: -webkit-flex;
@@ -918,6 +919,12 @@ svg {
 .RatioEnforcer.RatioEnforcer--landingJobsLogo {
   max-width: 171px;
   min-width: 171px; }
+
+.RatioEnforcer--blipLogo {
+  max-width: 98.35px; }
+
+.RatioEnforcer--ineoLogo {
+  max-width: 70.15px; }
 
 .RatioEnforcer.RatioEnforcer--batmanRobin {
   max-width: 281px; }
