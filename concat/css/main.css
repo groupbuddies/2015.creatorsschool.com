@@ -651,33 +651,52 @@ svg {
     margin-left: 0; }
 
 .List.List--partnerLogos {
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: -50px;
+  margin-left: -25px; }
   .List.List--partnerLogos .List-item {
-    -webkit-align-items: flex-end;
-        -ms-flex-align: end;
-            align-items: flex-end; }
-  .List.List--partnerLogos .List-item + .List-item {
-    margin-top: 25px;
-    margin-left: 0; }
-  @media (min-width: 768px) {
-    .List.List--partnerLogos {
-      -webkit-flex-direction: row;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -webkit-align-items: flex-end;
-          -ms-flex-align: end;
-              align-items: flex-end;
-      -webkit-justify-content: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
-      .List.List--partnerLogos .List-item + .List-item {
-        margin-top: 0;
-        margin-left: 50px; } }
+    -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 25px; }
+  @media (min-width: 500px) {
+    .List.List--partnerLogos .List-item {
+      width: 33%; } }
+  @media (min-width: 650px) {
+    .List.List--partnerLogos .List-item {
+      width: 25%; } }
+  @media (min-width: 1024px) {
+    .List.List--partnerLogos .List-item {
+      width: 20%; } }
 
 .List.List--stacked.List--centered {
   -webkit-align-items: center;
@@ -920,10 +939,13 @@ svg {
   max-width: 171px;
   min-width: 171px; }
 
-.RatioEnforcer--blipLogo {
+.RatioEnforcer.RatioEnforcer--blipLogo {
   max-width: 98.35px; }
 
-.RatioEnforcer--ineoLogo {
+.RatioEnforcer.RatioEnforcer--codeschoolLogo {
+  max-width: 157px; }
+
+.RatioEnforcer.RatioEnforcer--ineoLogo {
   max-width: 70.15px; }
 
 .RatioEnforcer.RatioEnforcer--batmanRobin {
