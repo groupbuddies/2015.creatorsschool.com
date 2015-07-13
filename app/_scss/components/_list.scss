@@ -45,26 +45,43 @@
 }
 
 .List.List--partnerLogos {
-  flex-direction: column;
-  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  width: 100%;
+  margin-top: -$Theme-spacing-default;
+  margin-left: -$Theme-spacing-small;
 
   .List-item {
-    align-items: flex-end;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 100%;
+    margin-top: $Theme-spacing-default;
+    margin-left: $Theme-spacing-small;
   }
 
-  .List-item + .List-item {
-    margin-top: $Theme-spacing-small;
-    margin-left: 0;
+  @include media('>=500px') {
+    .List-item {
+      width: 33%;
+    }
   }
 
-  @include media(">=tablet") {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
+  @include media('>=650px') {
+    .List-item {
+      width: 25%;
+    }
+  }
 
-    .List-item + .List-item {
-      margin-top: 0;
-      margin-left: $Theme-spacing-default;
+  @include media('>=1024px') {
+    .List-item {
+      width: 20%;
     }
   }
 }
