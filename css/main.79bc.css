@@ -954,34 +954,6 @@ svg {
     .RatioEnforcer.RatioEnforcer--batmanRobin {
       max-width: 421px; } }
 
-.RibbonSeparator {
-  margin-bottom: 50px; }
-  @media (min-width: 600px) {
-    .RibbonSeparator {
-      margin-bottom: 0; } }
-  @media (min-width: 1024px) {
-    .RibbonSeparator {
-      margin-bottom: -5%; } }
-  @media (min-width: 1280px) {
-    .RibbonSeparator {
-      margin-bottom: -7%; } }
-
-.RibbonSeparator.RibbonSeparator--inverted {
-  margin-top: 50px;
-  margin-bottom: 0; }
-  @media (min-width: 600px) {
-    .RibbonSeparator.RibbonSeparator--inverted {
-      margin-top: 0;
-      margin-bottom: 0; } }
-  @media (min-width: 1024px) {
-    .RibbonSeparator.RibbonSeparator--inverted {
-      margin-top: -5%;
-      margin-bottom: 0; } }
-  @media (min-width: 1280px) {
-    .RibbonSeparator.RibbonSeparator--inverted {
-      margin-top: -7%;
-      margin-bottom: 0; } }
-
 .Separator {
   display: inline-block;
   width: 40px;
